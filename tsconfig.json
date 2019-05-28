@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./build",
+
+    // For debugging
+    "sourceMap": true,
+    "inlineSources": true,
+    "skipLibCheck": true,
+
+    "forceConsistentCasingInFileNames": true,
+
+    "strict": true,
+    "allowJs": true
+  },
+  "include": [ "src/**/*"],
+  "exclude": [ "./node_modules/*", "build" ],
+  "compileOnSave": true
+}
