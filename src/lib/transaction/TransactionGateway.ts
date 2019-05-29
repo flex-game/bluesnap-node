@@ -1,9 +1,9 @@
 import CardTransactionGateway from './card/CardTransactionGateway';
 import WalletTransactionGateway from './wallet/WalletTransactionGateway';
-import EcpAchTransactionGateway from './ecpAch/EcpAchTransactionGateway';
-import SepaDdTransactionGateway from './sepaDirectDebit/SepaDdTransactionGateway';
+import EcpAchTransactionGateway from './alt/ecpAch/EcpAchTransactionGateway';
+import SepaDdTransactionGateway from './alt/sepaDirectDebit/SepaDdTransactionGateway';
 import BatchTransactionGateway from './batch/BatchTransactionGateway';
-import PayPalTransactionGateway from './paypal/PayPalTransactionGateway';
+import PayPalTransactionGateway from './alt/paypal/PayPalTransactionGateway';
 import HttpClient from '../http/HttpClient';
 
 export default class MarketplaceGateway {

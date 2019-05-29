@@ -23,7 +23,7 @@ export default class HttpClient {
         });
     }
 
-    public async post(path: string, body: Record<string, any>): Promise<any> {
+    public async post(path: string, body?: Record<string, any> | null): Promise<any> {
         return await fetch(`${this.config.getBaseUrl()}path`, {
             method: 'POST',
             headers: this.getHeaders(),
@@ -31,7 +31,7 @@ export default class HttpClient {
         });
     }
 
-    public async put(path: string, body?: Record<string, any>): Promise<any> {
+    public async put(path: string, body?: Record<string, any> | null): Promise<any> {
         return await fetch(`${this.config.getBaseUrl()}path`, {
             method: 'PUT',
             headers: this.getHeaders(),
