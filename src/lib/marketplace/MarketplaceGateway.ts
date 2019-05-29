@@ -25,7 +25,7 @@ export default class MarketplaceGateway {
 
     public async get(vendorId: string): Promise<VendorResponse> {
         const path = `/services/2/vendors/${vendorId}`;
-        return await this.http.put(path);
+        return await this.http.get(path);
     }
 
     public async getAll(parameters?: MarketplaceGetAllQueryParams): Promise<VendorsResponse> {
