@@ -19,7 +19,7 @@ export default interface SubscriptionResponse {
     chargeFrequency: 'ONCE' | 'DAILY' | 'WEEKLY' | 'EVERY 2 WEEKS' | 'MONTHLY' | 'EVERY 2 MONTHS' | 'QUARTERLY' | 'EVERY 6 MONTHS' | 'ANNUALLY' | 'EVERY 2 YEARS' | 'EVERY 3 YEARS';
     trialPeriodDays: number;
     overrideTrialPeriodDays: number;
-    recurringChargeAmount: number
+    recurringChargeAmount: number;
     overrideRecurringChargeAmount: number;
     currency: string;
     initialChargeAmount: string;

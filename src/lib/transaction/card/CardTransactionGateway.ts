@@ -14,25 +14,25 @@ export default class CardTransactionGateway {
     }
 
     public async authCapture(cardTransaction: AuthCaptureRequest): Promise<CardTransactionResponse | ErrorResponse> {
-        const path = `/services/2/transactions`;
+        const path = '/services/2/transactions';
         const body = cardTransaction;
         return await this.http.post(path, body);
     }
 
     public async authOnly(cardTransaction: AuthRequest): Promise<CardTransactionResponse | ErrorResponse> {
-        const path = `/services/2/transactions`;
+        const path = '/services/2/transactions';
         const body = cardTransaction;
         return await this.http.post(path, body);
     }
 
     public async capture(cardTransaction: CaptureRequest): Promise<CardTransactionResponse | ErrorResponse> {
-        const path = `/services/2/transactions`;
+        const path = '/services/2/transactions';
         const body = cardTransaction;
         return await this.http.put(path, body);
     }
 
     public async authReversal(cardTransaction: AuthReversalRequest): Promise<CardTransactionResponse | ErrorResponse> {
-        const path = `/services/2/transactions`;
+        const path = '/services/2/transactions';
         const body = cardTransaction;
         return await this.http.put(path, body);
     }

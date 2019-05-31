@@ -11,13 +11,13 @@ export default class PayPalTransactionGateway {
     }
 
     public async create(altTransaction: AltTransactionPayPalRequest): Promise<AltTransactionPayPalResponse | ErrorResponse> {
-        const path = `/services/2/alt-transactions`;
+        const path = '/services/2/alt-transactions';
         const body = altTransaction;
         return await this.http.post(path, body);
     }
 
     public async update(altTransaction: AltTransactionPayPalRequest): Promise<AltTransactionPayPalResponse | ErrorResponse> {
-        const path = `/services/2/alt-transactions`;
+        const path = '/services/2/alt-transactions';
         const body = altTransaction;
         return await this.http.put(path, body);
     }

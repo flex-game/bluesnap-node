@@ -11,7 +11,7 @@ export default class EcpAchTransactionGateway {
     }
 
     public async create(altTransaction: AltTransactionEcpAchRequest): Promise<AltTransactionEcpAchResponse | ErrorResponse> {
-        const path = `/services/2/alt-transactions`;
+        const path = '/services/2/alt-transactions';
         const body = altTransaction;
         return await this.http.post(path, body);
     }

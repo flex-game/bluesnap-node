@@ -7,5 +7,5 @@ import EcpRequest from '../ecp/EcpRequest';
 export default interface EcpDetailsRequest {
     billingContactInfo: BillingContactInfoRequest;
     ecp: EcpRequest;
-    status: string
+    status: string;
 }

@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
 import BlueSnapConfig from '../bluesnap/BlueSnapConfig';
-const version = require('../../package.json').version;
+
+const { version } = require('../../package.json');
 
 export default class HttpClient {
     private config: BlueSnapConfig;
@@ -27,7 +28,7 @@ export default class HttpClient {
         return await fetch(`${this.config.getBaseUrl()}path`, {
             method: 'POST',
             headers: this.getHeaders(),
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
         });
     }
 
@@ -35,7 +36,7 @@ export default class HttpClient {
         return await fetch(`${this.config.getBaseUrl()}path`, {
             method: 'PUT',
             headers: this.getHeaders(),
-            body: JSON.stringify(body)
+            body: JSON.stringify(body),
         });
     }
 
@@ -54,6 +55,6 @@ export default class HttpClient {
     }
 
     private get authorizationHeader() {
-        return `Basic ${(new Buffer(this.config.username + ':' + this.config.password)).toString('base64')}`;
+        return `Basic ${(new Buffer(`${this.config.username}:${this.config.password}`)).toString('base64')}`;
     }
 }

@@ -11,7 +11,7 @@ export default class VaultedShopperGateway {
     }
 
     public async create(shopper: VaultedShopperRequest): Promise<VaultedShopperResponse | ErrorResponse> {
-        const path = `/services/2/vaulted-shoppers`;
+        const path = '/services/2/vaulted-shoppers';
         const body = shopper;
         return await this.http.post(path, body);
     }

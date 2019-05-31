@@ -12,7 +12,7 @@ export default interface VaultedShopperRequest {
     descriptorPhoneNumber?: string;
     merchantShopperId?: string;
     country?: string;
-    state?: string
+    state?: string;
     city?: string;
     address?: string;
     address2?: string;

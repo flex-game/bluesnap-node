@@ -7,10 +7,15 @@ import HttpClient from '../http/HttpClient';
 
 export default class MarketplaceGateway {
     private http: HttpClient;
+
     public card: CardTransactionGateway;
+
     public wallet: WalletTransactionGateway;
+
     public ecp: EcpAchTransactionGateway;
+
     public sepadd: SepaDdTransactionGateway;
+
     public paypal: PayPalTransactionGateway;
 
     public constructor(http: HttpClient) {
@@ -21,5 +26,4 @@ export default class MarketplaceGateway {
         this.sepadd = new SepaDdTransactionGateway(http);
         this.paypal = new PayPalTransactionGateway(http);
     }
-
 }

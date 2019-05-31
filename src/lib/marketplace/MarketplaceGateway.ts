@@ -13,7 +13,7 @@ export default class MarketplaceGateway {
     }
 
     public async create(vendor: VendorRequest): Promise<VendorResponse | ErrorResponse> {
-        const path = `/services/2/vendors`;
+        const path = '/services/2/vendors';
         const body = vendor;
         return await this.http.post(path, body);
     }

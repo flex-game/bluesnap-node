@@ -18,7 +18,7 @@ export default class WalletGateway {
     }
 
     private async create(wallet: ApplePayWalletRequest | MasterpassWalletRequest | VisaCheckoutWalletRequest): Promise<any> {
-        const path = `/services/2/wallets`;
+        const path = '/services/2/wallets';
         const body = wallet;
         return await this.http.post(path, body);
     }
@@ -31,7 +31,7 @@ export default class WalletGateway {
         return this.create(wallet);
     }
 
-    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse | ErrorResponse>  {
+    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse | ErrorResponse> {
         return this.create(wallet);
     }
 
@@ -42,12 +42,12 @@ export default class WalletGateway {
     }
 
     public async getOrCreateVisaCheckoutApiKey(): Promise<Record<string, any>> {
-        const path = `/services/2/wallets/visa/apikey`;
+        const path = '/services/2/wallets/visa/apikey';
         return await this.http.post(path, null);
     }
 
     public async onboardApplePay(wallet: OnboardApplePayRequest): Promise<Record<string, any>> {
-        const path = `/services/2/wallets/onboarding`;
+        const path = '/services/2/wallets/onboarding';
         const body = wallet;
         return await this.http.post(path, body);
     }

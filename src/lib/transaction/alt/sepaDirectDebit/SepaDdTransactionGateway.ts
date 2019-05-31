@@ -11,7 +11,7 @@ export default class SepaDdTransactionGatewayTransactionGateway {
     }
 
     public async create(altTransaction: AltTransactionSepaDdRequest): Promise<AltTransactionSepaDdResponse | ErrorResponse> {
-        const path = `/services/2/alt-transactions`;
+        const path = '/services/2/alt-transactions';
         const body = altTransaction;
         return await this.http.post(path, body);
     }

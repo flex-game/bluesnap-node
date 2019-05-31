@@ -1,4 +1,4 @@
-import * as querystring from "querystring";
+import * as querystring from 'querystring';
 import HttpClient from '../http/HttpClient';
 import PlanRequest from './models/plan/PlanRequest';
 import PlanResponse from './models/plan/PlanResponse';
@@ -23,7 +23,7 @@ export default class SubscriptionGateway {
      */
 
     public async createPlan(plan: PlanRequest): Promise<PlanResponse | ErrorResponse> {
-        const path = `/services/2/recurring/plans`;
+        const path = '/services/2/recurring/plans';
         const body = plan;
         return await this.http.post(path, body);
     }
@@ -50,13 +50,13 @@ export default class SubscriptionGateway {
      */
 
     public async createSubscription(subscription: SubscriptionRequest): Promise<SubscriptionResponse | ErrorResponse> {
-        const path = `/services/2/recurring/subscriptions`;
+        const path = '/services/2/recurring/subscriptions';
         const body = subscription;
         return await this.http.post(path, body);
     }
 
     public async createMerchantManagedSubscription(subscription: SubscriptionRequest): Promise<SubscriptionResponse | ErrorResponse> {
-        const path = `/services/2/recurring/ondemand`;
+        const path = '/services/2/recurring/ondemand';
         const body = subscription;
         return await this.http.post(path, body);
     }
