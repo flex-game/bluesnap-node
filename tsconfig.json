@@ -4,7 +4,7 @@
     "target": "es6",
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "./build",
+    "outDir": "dist",
 
     // For debugging
     "sourceMap": true,
@@ -12,11 +12,12 @@
     "skipLibCheck": true,
 
     "forceConsistentCasingInFileNames": true,
-
-    "strict": true,
-    "allowJs": true
+    "strict": true
   },
   "include": [ "src/**/*"],
-  "exclude": [ "./node_modules/*", "build" ],
-  "compileOnSave": true
+  "exclude": [ "./node_modules/*", "dist" ],
+  "compileOnSave": true,
+
+  // Emit .d.ts definitions file
+  "declaration": true
 }
