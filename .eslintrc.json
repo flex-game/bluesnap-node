@@ -14,7 +14,7 @@
     },
     "plugins": ["@typescript-eslint"],
     "rules": {
-        "max-len": ["warn", 200, {"ignoreComments": true}]
+        "max-len": ["warn", 120, {"ignoreComments": true}]
     },
     "settings": {
         "import/parsers": {
