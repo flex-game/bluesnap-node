@@ -8,6 +8,7 @@ import VisaCheckoutWalletResponse from './models/visaCheckoutWallet/VisaCheckout
 import OnboardApplePayResponse from './models/onboardApplePay/OnboardApplePayResponse';
 import OnboardApplePayRequest from './models/onboardApplePay/OnboardApplePayRequest';
 import RetrievedWalletResponse from './models/retrievedWallet/RetrievedWalletResponse';
+import ErrorResponse from '../errors/models/ErrorResponse';
 
 export default class WalletGateway {
     private http: HttpClient;
@@ -22,20 +23,20 @@ export default class WalletGateway {
         return await this.http.post(path, body);
     }
 
-    public async createApplePayWallet(wallet: ApplePayWalletRequest): Promise<ApplePayWalletResponse> {
+    public async createApplePayWallet(wallet: ApplePayWalletRequest): Promise<ApplePayWalletResponse | ErrorResponse> {
         return this.create(wallet);
     }
 
-    public async createMasterpassWallet(wallet: MasterpassWalletRequest): Promise<MasterpassWalletResponse> {
+    public async createMasterpassWallet(wallet: MasterpassWalletRequest): Promise<MasterpassWalletResponse | ErrorResponse> {
         return this.create(wallet);
     }
 
-    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse>  {
+    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse | ErrorResponse>  {
         return this.create(wallet);
     }
 
     // The Retrieve Wallet request is supported for Masterpass and Visa Checkout.
-    public async get(walletId: string): Promise<RetrievedWalletResponse> {
+    public async get(walletId: string): Promise<RetrievedWalletResponse | ErrorResponse> {
         const path = `/services/2/wallets/${walletId}`;
         return await this.http.get(path);
     }
@@ -51,7 +52,7 @@ export default class WalletGateway {
         return await this.http.post(path, body);
     }
 
-    public async getApplePayOnboardInfo(onboardingId: string): Promise<OnboardApplePayResponse> {
+    public async getApplePayOnboardInfo(onboardingId: string): Promise<OnboardApplePayResponse | ErrorResponse> {
         const path = `/services/2/wallets/onboarding/${onboardingId}`;
         return await this.http.get(path);
     }

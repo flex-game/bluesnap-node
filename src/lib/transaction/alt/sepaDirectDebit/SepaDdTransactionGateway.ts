@@ -1,6 +1,7 @@
 import HttpClient from '../../../http/HttpClient';
 import AltTransactionSepaDdRequest from './models/altTransactionSepaDirectDebit/AltTransactionSepaDdRequest';
 import AltTransactionSepaDdResponse from './models/altTransactionSepaDirectDebit/AltTransactionSepaDdResponse';
+import ErrorResponse from '../../../errors/models/ErrorResponse';
 
 export default class SepaDdTransactionGatewayTransactionGateway {
     private http: HttpClient;
@@ -9,13 +10,13 @@ export default class SepaDdTransactionGatewayTransactionGateway {
         this.http = http;
     }
 
-    public async create(altTransaction: AltTransactionSepaDdRequest): Promise<AltTransactionSepaDdResponse> {
+    public async create(altTransaction: AltTransactionSepaDdRequest): Promise<AltTransactionSepaDdResponse | ErrorResponse> {
         const path = `/services/2/alt-transactions`;
         const body = altTransaction;
         return await this.http.post(path, body);
     }
 
-    public async get(transactionId: string): Promise<AltTransactionSepaDdResponse> {
+    public async get(transactionId: string): Promise<AltTransactionSepaDdResponse | ErrorResponse> {
         const path = `/services/2/alt-transactions/${transactionId}`;
         return await this.http.get(path);
     }
