@@ -25,24 +25,24 @@ export default class SubscriptionGateway {
     public async createPlan(plan: PlanRequest): Promise<PlanResponse | ErrorResponse> {
         const path = '/services/2/recurring/plans';
         const body = plan;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async updatePlan(planId: number, updates: PlanRequest): Promise<PlanResponse | ErrorResponse> {
         const path = `/services/2/recurring/plans/${planId}`;
         const body = updates;
-        return await this.http.put(path, body);
+        return this.http.put(path, body);
     }
 
     public async getPlan(planId: number): Promise<PlanResponse | ErrorResponse> {
         const path = `/services/2/recurring/plans/${planId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getAllPlans(parameters?: GetAllPlansQueryParmas): Promise<PlanListResponse | ErrorResponse> {
         const queryParams = querystring.stringify(parameters);
         const path = `/services/2/recurring/plans?${queryParams}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     /**
@@ -52,53 +52,53 @@ export default class SubscriptionGateway {
     public async createSubscription(subscription: SubscriptionRequest): Promise<SubscriptionResponse | ErrorResponse> {
         const path = '/services/2/recurring/subscriptions';
         const body = subscription;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async createMerchantManagedSubscription(subscription: SubscriptionRequest): Promise<SubscriptionResponse | ErrorResponse> {
         const path = '/services/2/recurring/ondemand';
         const body = subscription;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async createMerchantManagedSubscriptionCharge(subscriptionId: number, charge: ChargeRequest): Promise<ChargeResponse | ErrorResponse> {
         const path = `/services/2/recurring/ondemand/${subscriptionId}`;
         const body = charge;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async updateSubscription(subscriptionId: number, updates: SubscriptionRequest): Promise<SubscriptionResponse | ErrorResponse> {
         const path = `/services/2/recurring/subscriptions/${subscriptionId}`;
         const body = updates;
-        return await this.http.put(path, body);
+        return this.http.put(path, body);
     }
 
     public async getSubscription(subscriptionId: number): Promise<SubscriptionResponse | ErrorResponse> {
         const path = `/services/2/recurring/subscriptions/${subscriptionId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getSubscriptionCharge(transactionId: string): Promise<ChargeResponse | ErrorResponse> {
         const path = `/services/2/recurring/subscriptions/charges/resolve?transactionid=${transactionId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getSubscriptionSwitchCharge(subscriptionId: number, parameters?: GetSubscriptionSwitchChargeQueryParams): Promise<ChargeResponse | ErrorResponse> {
         const queryParams = querystring.stringify(parameters);
         const path = `/services/2/recurring/subscriptions/${subscriptionId}/switch-charge-amount?${queryParams}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getAllSubscriptions(parameters?: GetAllSubscriptionsQueryParams): Promise<SubscriptionListResponse | ErrorResponse> {
         const queryParams = querystring.stringify(parameters);
         const path = `/services/2/recurring/subscriptions?${queryParams}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getAllSubscriptionCharges(subscriptionId: number, parameters?: GetAllSubscriptionChargesQueryParams): Promise<ChargeListResponse | ErrorResponse> {
         const queryParams = querystring.stringify(parameters);
         const path = `/services/2/recurring/subscriptions/${subscriptionId}/charges?${queryParams}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 }
 

@@ -15,24 +15,24 @@ export default class MarketplaceGateway {
     public async create(vendor: VendorRequest): Promise<VendorResponse | ErrorResponse> {
         const path = '/services/2/vendors';
         const body = vendor;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async update(vendorId: string, updates: VendorRequest): Promise<VendorResponse | ErrorResponse> {
         const path = `/services/2/vendors/${vendorId}`;
         const body = updates;
-        return await this.http.put(path, body);
+        return this.http.put(path, body);
     }
 
     public async get(vendorId: string): Promise<VendorResponse | ErrorResponse> {
         const path = `/services/2/vendors/${vendorId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getAll(parameters?: MarketplaceGetAllQueryParams): Promise<VendorsResponse | ErrorResponse> {
         const queryParams = querystring.stringify(parameters);
         const path = `/services/2/vendors?${queryParams}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 }
 

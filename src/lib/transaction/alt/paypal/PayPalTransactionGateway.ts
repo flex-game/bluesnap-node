@@ -13,17 +13,17 @@ export default class PayPalTransactionGateway {
     public async create(altTransaction: AltTransactionPayPalRequest): Promise<AltTransactionPayPalResponse | ErrorResponse> {
         const path = '/services/2/alt-transactions';
         const body = altTransaction;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async update(altTransaction: AltTransactionPayPalRequest): Promise<AltTransactionPayPalResponse | ErrorResponse> {
         const path = '/services/2/alt-transactions';
         const body = altTransaction;
-        return await this.http.put(path, body);
+        return this.http.put(path, body);
     }
 
     public async get(orderId: string): Promise<AltTransactionPayPalResponse | ErrorResponse> {
         const path = `/services/2/alt-transactions/resolve?orderId=${orderId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 }

@@ -13,11 +13,11 @@ export default class EcpAchTransactionGateway {
     public async create(altTransaction: AltTransactionEcpAchRequest): Promise<AltTransactionEcpAchResponse | ErrorResponse> {
         const path = '/services/2/alt-transactions';
         const body = altTransaction;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async get(transactionId: string): Promise<AltTransactionEcpAchResponse | ErrorResponse> {
         const path = `/services/2/alt-transactions/${transactionId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 }

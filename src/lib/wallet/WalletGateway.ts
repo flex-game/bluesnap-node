@@ -20,7 +20,7 @@ export default class WalletGateway {
     private async create(wallet: ApplePayWalletRequest | MasterpassWalletRequest | VisaCheckoutWalletRequest): Promise<any> {
         const path = '/services/2/wallets';
         const body = wallet;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async createApplePayWallet(wallet: ApplePayWalletRequest): Promise<ApplePayWalletResponse | ErrorResponse> {
@@ -38,22 +38,22 @@ export default class WalletGateway {
     // The Retrieve Wallet request is supported for Masterpass and Visa Checkout.
     public async get(walletId: string): Promise<RetrievedWalletResponse | ErrorResponse> {
         const path = `/services/2/wallets/${walletId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 
     public async getOrCreateVisaCheckoutApiKey(): Promise<Record<string, any>> {
         const path = '/services/2/wallets/visa/apikey';
-        return await this.http.post(path, null);
+        return this.http.post(path, null);
     }
 
     public async onboardApplePay(wallet: OnboardApplePayRequest): Promise<Record<string, any>> {
         const path = '/services/2/wallets/onboarding';
         const body = wallet;
-        return await this.http.post(path, body);
+        return this.http.post(path, body);
     }
 
     public async getApplePayOnboardInfo(onboardingId: string): Promise<OnboardApplePayResponse | ErrorResponse> {
         const path = `/services/2/wallets/onboarding/${onboardingId}`;
-        return await this.http.get(path);
+        return this.http.get(path);
     }
 }

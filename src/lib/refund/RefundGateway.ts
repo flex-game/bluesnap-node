@@ -12,7 +12,7 @@ export default class RefundGateway {
     public async refund(transactionId: string, params?: RefundQueryParams): Promise<void | ErrorResponse> {
         const queryParams = querystring.stringify(params);
         const path = `/services/2/transaction/${transactionId}/refund?${queryParams}`;
-        return await this.http.put(path);
+        return this.http.put(path);
     }
 }
 
