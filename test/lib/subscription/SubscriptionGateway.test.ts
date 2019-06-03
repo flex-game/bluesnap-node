@@ -17,7 +17,7 @@ describe('SubscriptionGateway Integration Test', () => {
     let merchantManagedSubscription: SubscriptionResponse;
     let charge: ChargeResponse;
 
-    async function createPlanAndSubscription() {
+    async function createPlansAndSubscriptions() {
         plan = await gateway.subscription.createPlan({
             chargeFrequency: 'ANNUALLY',
             name: faker.random.word(),
@@ -36,7 +36,7 @@ describe('SubscriptionGateway Integration Test', () => {
         charge = await gateway.subscription.createMerchantManagedSubscriptionCharge(merchantManagedSubscription.subscriptionId, {currency: 'USD'});
     }
 
-    beforeAll(createPlanAndSubscription);
+    beforeAll(createPlansAndSubscriptions);
 
     /**
      * Plans
