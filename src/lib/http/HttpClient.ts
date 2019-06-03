@@ -10,39 +10,39 @@ export default class HttpClient {
         this.config = config;
     }
 
-    public async delete(path: string): Promise<any> {
-        return fetch(`${this.config.getBaseUrl()}${path}`, {
-            method: 'DELETE',
-            headers: this.getHeaders(),
-        });
-    }
-
     public async get(path: string): Promise<any> {
-        return fetch(`${this.config.getBaseUrl()}${path}`, {
+        const response = await fetch(`${this.config.getBaseUrl()}${path}`, {
             method: 'GET',
             headers: this.getHeaders(),
         });
+
+        return await response.json();
     }
 
     public async post(path: string, body?: Record<string, any> | null): Promise<any> {
-        return fetch(`${this.config.getBaseUrl()}${path}`, {
+        const response = await fetch(`${this.config.getBaseUrl()}${path}`, {
             method: 'POST',
             headers: this.getHeaders(),
             body: JSON.stringify(body),
         });
+
+        return await response.json();
     }
 
     public async put(path: string, body?: Record<string, any> | null): Promise<any> {
-        return fetch(`${this.config.getBaseUrl()}${path}`, {
+        const response = await fetch(`${this.config.getBaseUrl()}${path}`, {
             method: 'PUT',
             headers: this.getHeaders(),
             body: JSON.stringify(body),
         });
+
+        return await response.json();
     }
 
     private getHeaders(): Record<string, any> {
         const headers: Record<string, any> = {
             Authorization: this.getAuthorizationHeader(),
+            'Accept': 'application/json',
             'Content-Type': 'application/json',
             'User-Agent': `bluesnap-node-${version}`,
         };
