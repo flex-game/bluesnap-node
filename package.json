@@ -7,14 +7,19 @@
   "scripts": {
     "compile": "tsc && copyfiles 'src/**/*' dist -e '**/*.ts' -e '**/*/*.js'",
     "lint": "eslint \"src/**\"",
-    "lint:fix": "eslint --fix \"src/**\""
+    "lint:fix": "eslint --fix \"src/**\"",
+    "test": "NODE_ENV=test npx jest --testPathPattern='test' --detectOpenHandles --forceExit",
+    "test:ci": "npm run test -- --ci --coverage --silent"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Footage-Firm/bluesnap-node.git"
   },
   "keywords": [
-    "bluesnap"
+    "bluesnap",
+    "payment-gateway",
+    "payments",
+    "typescript"
   ],
   "author": "Sam Rubin <https://github.com/smrubin>",
   "license": "MIT",
@@ -22,21 +27,55 @@
     "url": "https://github.com/Footage-Firm/bluesnap-node/issues"
   },
   "homepage": "https://github.com/Footage-Firm/bluesnap-node#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  },
   "devDependencies": {
+    "@types/config": "0.0.34",
+    "@types/jest": "^24.0.13",
     "@types/node": "^10.12.18",
     "@types/node-fetch": "^2.3.4",
     "@types/readable-stream": "^2.3.1",
     "@typescript-eslint/eslint-plugin": "^1.4.2",
     "@typescript-eslint/parser": "^1.4.2",
+    "config": "^3.1.0",
     "copyfiles": "^2.1.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-typescript": "^1.1.1",
     "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.8.0",
+    "jest-junit": "^6.4.0",
+    "ts-jest": "^24.0.2",
     "ts-node": "^3.3.0",
     "typescript": "^3.3.3333"
   },
-  "dependencies": {
-    "node-fetch": "^2.6.0"
+  "jest": {
+    "globalSetup": "./test/util/jest-global-setup.ts",
+    "globalTeardown": "./test/util/jest-global-teardown.ts",
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/test/**/__tests__/**/*.(js|ts)?(x)",
+      "<rootDir>/test/**/?(*.)+(spec|test).(js|ts)?(x)"
+    ],
+    "testEnvironment": "node",
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "jest-junit": {
+    "output": "test-reports/junit.xml"
   }
 }
