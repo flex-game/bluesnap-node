@@ -2,8 +2,9 @@ import VendorPrincipalResponse from '../vendorPrincipal/VendorPrincipalResponse'
 import VendorAgreementResponse from '../vendorAgreement/VendorAgreementResponse';
 import PayoutInfoResponse from '../payoutInfo/PayoutInfoResponse';
 import VerificationResponse from '../verification/VerificationResponse';
+import ValidatedResponse from '../../../errors/models/ValidatedResponse';
 
-export default interface VendorResponse {
+export default interface VendorResponse extends ValidatedResponse {
     vendorId: number;
     email: string;
     name: string;

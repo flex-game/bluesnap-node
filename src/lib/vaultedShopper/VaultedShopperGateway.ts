@@ -1,7 +1,6 @@
 import HttpClient from '../http/HttpClient';
 import VaultedShopperResponse from './models/vaultedShopper/VaultedShopperResponse';
 import VaultedShopperRequest from './models/vaultedShopper/VaultedShopperRequest';
-import ErrorResponse from '../errors/models/ErrorResponse';
 
 export default class VaultedShopperGateway {
     private http: HttpClient;
@@ -10,19 +9,19 @@ export default class VaultedShopperGateway {
         this.http = http;
     }
 
-    public async create(shopper: VaultedShopperRequest): Promise<VaultedShopperResponse | ErrorResponse> {
+    public async create(shopper: VaultedShopperRequest): Promise<VaultedShopperResponse> {
         const path = '/services/2/vaulted-shoppers';
         const body = shopper;
         return this.http.post(path, body);
     }
 
-    public async update(shopperId: string, updates: VaultedShopperRequest): Promise<VaultedShopperResponse | ErrorResponse> {
+    public async update(shopperId: string, updates: VaultedShopperRequest): Promise<VaultedShopperResponse> {
         const path = `/services/2/vaulted-shoppers/${shopperId}`;
         const body = updates;
         return this.http.put(path, body);
     }
 
-    public async get(shopperId: string): Promise<VaultedShopperResponse | ErrorResponse> {
+    public async get(shopperId: string): Promise<VaultedShopperResponse> {
         const path = `/services/2/vaulted-shoppers/${shopperId}`;
         return this.http.put(path);
     }

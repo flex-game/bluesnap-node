@@ -3,11 +3,12 @@ import ProcessingInfoResponse from '../../../models/processingInfo/ProcessingInf
 import FraudResultInfoResponse from '../../../models/fraudResultInfo/FraudResultInfoResponse';
 import RefundsResponse from '../../../../refund/models/refunds/RefundsResponse';
 import PayerInfoResponse from '../../../../vaultedShopper/models/payerInfo/PayerInfoResponse';
+import ValidatedResponse from '../../../../errors/models/ValidatedResponse';
 
 /**
  * Contains the information required to process a transaction with an alternative payment method
  */
-export default interface AltTransactionResponse {
+export default interface AltTransactionResponse extends ValidatedResponse {
     amount: number;
     payerInfo: PayerInfoResponse;
     vaultedShopperId: number;
