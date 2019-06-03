@@ -2,7 +2,7 @@ import VendorsInfoRequest from '../../../../marketplace/models/vendorsInfo/Vendo
 import TransactionMetaDataRequest from '../../../models/transactionMetaData/TransactionMetaDataRequest';
 
 export default interface CaptureRequest {
-    amount? :number;
+    amount? : number;
     softDescriptor?: string;
     vendorsInfo?: VendorsInfoRequest;
     cardTransactionType: string;

@@ -13,6 +13,9 @@
         "warnOnUnsupportedTypeScriptVersion": true
     },
     "plugins": ["@typescript-eslint"],
+    "rules": {
+        "max-len": ["warn", 120, {"ignoreComments": true}]
+    },
     "settings": {
         "import/parsers": {
             "@typescript-eslint/parser": [".ts", ".tsx"]

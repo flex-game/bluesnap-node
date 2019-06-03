@@ -9,10 +9,15 @@ import HttpClient from '../http/HttpClient';
 
 export default class BlueSnapGateway {
     public marketplace: MarketplaceGateway;
+
     public refund: RefundGateway;
+
     public shopper: VaultedShopperGateway;
+
     public subscription: SubscriptionGateway;
+
     public wallet: WalletGateway;
+
     public transaction: TransactionGateway;
 
     public constructor(config: BlueSnapConfig) {

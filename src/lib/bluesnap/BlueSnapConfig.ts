@@ -2,8 +2,11 @@ type Environment = 'Production' | 'Sandbox';
 
 export default class BlueSnapConfig {
     public environment: Environment;
+
     public username: string;
+
     public password: string;
+
     public apiVersion?: string; // Optional. BlueSnap will default based on the merchant account if not specified.
 
     public constructor(environment: Environment, username: string, password: string, apiVersion?: string) {
@@ -14,7 +17,7 @@ export default class BlueSnapConfig {
     }
 
     public getBaseUrl(): string {
-        switch(this.environment) {
+        switch (this.environment) {
             case 'Production':
                 return 'https://ws.bluesnap.com';
             case 'Sandbox':

@@ -8,11 +8,11 @@ import PaymentSourcesResponse from '../paymentSources/PaymentSourcesResponse';
  * Contains information about the vaulted shopper
  */
 export default interface VaultedShopperResponse {
-    vaultedShopperId: number
+    vaultedShopperId: number;
     firstName: string;
     lastName: string;
     country: string;
-    state: string
+    state: string;
     city: string;
     address: string;
     address2: string;
