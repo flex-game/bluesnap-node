@@ -27,7 +27,7 @@ export default class SubscriptionGateway {
         return this.http.post(path, body);
     }
 
-    public async updatePlan(planId: number, updates: PlanRequest): Promise<PlanResponse> {
+    public async updatePlan(planId: number, updates: Partial<PlanRequest>): Promise<PlanResponse> {
         const path = `/services/2/recurring/plans/${planId}`;
         const body = updates;
         return this.http.put(path, body);
@@ -66,7 +66,7 @@ export default class SubscriptionGateway {
         return this.http.post(path, body);
     }
 
-    public async updateSubscription(subscriptionId: number, updates: SubscriptionRequest): Promise<SubscriptionResponse> {
+    public async updateSubscription(subscriptionId: number, updates: Partial<SubscriptionRequest>): Promise<SubscriptionResponse> {
         const path = `/services/2/recurring/subscriptions/${subscriptionId}`;
         const body = updates;
         return this.http.put(path, body);
@@ -77,7 +77,7 @@ export default class SubscriptionGateway {
         return this.http.get(path);
     }
 
-    public async getSubscriptionCharge(transactionId: string): Promise<ChargeResponse> {
+    public async getSubscriptionCharge(transactionId: number): Promise<ChargeResponse> {
         const path = `/services/2/recurring/subscriptions/charges/resolve?transactionid=${transactionId}`;
         return this.http.get(path);
     }
