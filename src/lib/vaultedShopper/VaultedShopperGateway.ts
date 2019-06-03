@@ -15,13 +15,13 @@ export default class VaultedShopperGateway {
         return this.http.post(path, body);
     }
 
-    public async update(shopperId: string, updates: VaultedShopperRequest): Promise<VaultedShopperResponse> {
+    public async update(shopperId: number, updates: VaultedShopperRequest): Promise<VaultedShopperResponse> {
         const path = `/services/2/vaulted-shoppers/${shopperId}`;
         const body = updates;
         return this.http.put(path, body);
     }
 
-    public async get(shopperId: string): Promise<VaultedShopperResponse> {
+    public async get(shopperId: number): Promise<VaultedShopperResponse> {
         const path = `/services/2/vaulted-shoppers/${shopperId}`;
         return this.http.put(path);
     }
