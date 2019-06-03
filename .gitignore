@@ -19,3 +19,6 @@ test-reports
 
 # Typescript
 dist
+
+# Configs
+config/test.yml
