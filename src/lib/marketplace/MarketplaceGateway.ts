@@ -17,13 +17,13 @@ export default class MarketplaceGateway {
         return this.http.post(path, body);
     }
 
-    public async update(vendorId: string, updates: VendorRequest): Promise<VendorResponse> {
+    public async update(vendorId: number, updates: Partial<VendorRequest>): Promise<VendorResponse> {
         const path = `/services/2/vendors/${vendorId}`;
         const body = updates;
         return this.http.put(path, body);
     }
 
-    public async get(vendorId: string): Promise<VendorResponse> {
+    public async get(vendorId: number): Promise<VendorResponse> {
         const path = `/services/2/vendors/${vendorId}`;
         return this.http.get(path);
     }
