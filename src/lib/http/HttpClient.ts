@@ -42,7 +42,7 @@ export default class HttpClient {
 
     private getHeaders(): Record<string, any> {
         const headers: Record<string, any> = {
-            Authorization: this.authorizationHeader,
+            Authorization: this.getAuthorizationHeader(),
             'Content-Type': 'application/json',
             'User-Agent': `bluesnap-node-${version}`,
         };
@@ -54,7 +54,7 @@ export default class HttpClient {
         return headers;
     }
 
-    private get authorizationHeader(): string {
-        return `Basic ${Buffer.from(`${this.config.username}:${this.config.password}`, 'base64')}`;
+    private getAuthorizationHeader(): string {
+        return `Basic ${Buffer.from(`${this.config.username}:${this.config.password}`).toString('base64')}`;
     }
 }
