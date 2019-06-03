@@ -4,7 +4,6 @@ import AuthRequest from './models/authCapture/AuthRequest';
 import CaptureRequest from './models/authCapture/CaptureRequest';
 import AuthReversalRequest from './models/authCapture/AuthReversalRequest';
 import CardTransactionResponse from './models/cardTransaction/CardTransactionResponse';
-import ValidatedResponse from '../../errors/models/ValidatedResponse';
 
 export default class CardTransactionGateway {
     private http: HttpClient;
