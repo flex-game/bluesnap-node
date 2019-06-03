@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@types/config": "0.0.34",
+    "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.13",
     "@types/node": "^10.12.18",
     "@types/node-fetch": "^2.3.4",
@@ -44,6 +45,7 @@
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-typescript": "^1.1.1",
     "eslint-plugin-import": "^2.16.0",
+    "faker": "^4.1.0",
     "jest": "^24.8.0",
     "jest-junit": "^6.4.0",
     "ts-jest": "^24.0.2",
