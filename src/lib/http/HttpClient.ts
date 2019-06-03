@@ -42,7 +42,7 @@ export default class HttpClient {
     private getHeaders(): Record<string, any> {
         const headers: Record<string, any> = {
             Authorization: this.getAuthorizationHeader(),
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
             'User-Agent': `bluesnap-node-${version}`,
         };
