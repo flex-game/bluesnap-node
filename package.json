@@ -17,7 +17,7 @@
   },
   "keywords": [
     "bluesnap",
-    "payment-gateway",
+    "payment gateway",
     "payments",
     "typescript"
   ],
@@ -53,8 +53,6 @@
     "typescript": "^3.3.3333"
   },
   "jest": {
-    "globalSetup": "./test/util/jest-global-setup.ts",
-    "globalTeardown": "./test/util/jest-global-teardown.ts",
     "globals": {
       "ts-jest": {
         "tsConfig": "tsconfig.json"

@@ -28,8 +28,8 @@ describe('PayPalTransactionGatewat Integration Test', () => {
                 amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
                 currency: 'USD',
                 paypalTransaction: {
-                    cancelUrl: 'http://www.cancelURL.com',
-                    returnUrl: 'http://www.returnURL.com',
+                    cancelUrl: faker.internet.url(),
+                    returnUrl: faker.internet.url(),
                 },
             };
             const response: AltTransactionPayPalResponse = await gateway.transaction.paypal.create(request);
