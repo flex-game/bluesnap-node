@@ -5,6 +5,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "outDir": "./dist",
+    "types": ["jest"],
 
     // For debugging
     "sourceMap": true,
@@ -14,7 +15,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
-  "include": [ "src/**/*"],
+  "include": [ "src/**/*", "test/**/*", "config/**/*"],
   "exclude": [ "./node_modules/*", "dist" ],
   "compileOnSave": true,
   "declaration": true
