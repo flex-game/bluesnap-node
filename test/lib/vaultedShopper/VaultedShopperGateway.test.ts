@@ -4,11 +4,10 @@ import VaultedShopperRequest from '../../../src/lib/vaultedShopper/models/vaulte
 import VaultedShopperResponse from '../../../src/lib/vaultedShopper/models/vaultedShopper/VaultedShopperResponse';
 
 describe('VaultedShopperGateway Integration Test', () => {
-
     let shopper: VaultedShopperResponse;
 
     async function createVaultedShopper() {
-        shopper = await gateway.shopper.create({firstName: faker.name.firstName(), lastName: faker.name.lastName()});
+        shopper = await gateway.shopper.create({ firstName: faker.name.firstName(), lastName: faker.name.lastName() });
     }
 
     beforeAll(createVaultedShopper);
@@ -44,5 +43,4 @@ describe('VaultedShopperGateway Integration Test', () => {
             expect(response.vaultedShopperId).toEqual(shopperId);
         });
     });
-
 });

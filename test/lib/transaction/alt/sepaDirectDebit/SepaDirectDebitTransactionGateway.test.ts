@@ -6,7 +6,6 @@ import AltTransactionSepaDdRequest
     from '../../../../../src/lib/transaction/alt/sepaDirectDebit/models/altTransactionSepaDirectDebit/AltTransactionSepaDdRequest';
 
 describe('SepaDirectDebitTransactionGateway Integration Test', () => {
-
     let sepaDdTransaction: AltTransactionSepaDdResponse;
 
     const mockSepaDirectDebit = {
@@ -46,11 +45,10 @@ describe('SepaDirectDebitTransactionGateway Integration Test', () => {
 
     describe('get()', () => {
         test('should retrieve a SEPA direct debit transaction', async () => {
-            const transactionId = sepaDdTransaction.transactionId;
+            const { transactionId } = sepaDdTransaction;
             const response: AltTransactionSepaDdResponse = await gateway.transaction.sepadd.get(transactionId);
             expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });
-
 });

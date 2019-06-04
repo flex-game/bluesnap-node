@@ -6,7 +6,6 @@ import AltTransactionPayPalRequest
     from '../../../../../src/lib/transaction/alt/paypal/models/altTransactionPayPal/AltTransactionPayPalRequest';
 
 describe('PayPalTransactionGatewat Integration Test', () => {
-
     let paypalTransaction: AltTransactionPayPalResponse;
 
     async function createPayPalTransaction() {
@@ -39,7 +38,7 @@ describe('PayPalTransactionGatewat Integration Test', () => {
 
     describe('update()', () => {
         test('should update a PayPal transaction', async () => {
-            const transactionId = paypalTransaction.transactionId;
+            const { transactionId } = paypalTransaction;
             const request: AltTransactionPayPalRequest = {
                 amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
                 currency: 'USD',
@@ -55,11 +54,10 @@ describe('PayPalTransactionGatewat Integration Test', () => {
 
     describe('get()', () => {
         test('should retrieve a PayPal transaction', async () => {
-            const transactionId = paypalTransaction.transactionId;
+            const { transactionId } = paypalTransaction;
             const response: AltTransactionPayPalResponse = await gateway.transaction.paypal.get(transactionId);
             expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });
-
 });

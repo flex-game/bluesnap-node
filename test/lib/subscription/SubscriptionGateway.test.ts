@@ -11,7 +11,6 @@ import ChargeResponse from '../../../src/lib/subscription/models/charge/ChargeRe
 import ChargeListResponse from '../../../src/lib/subscription/models/chargeList/ChargeListResponse';
 
 describe('SubscriptionGateway Integration Test', () => {
-
     let plan: PlanResponse;
     let subscription: SubscriptionResponse;
     let merchantManagedSubscription: SubscriptionResponse;
@@ -80,7 +79,7 @@ describe('SubscriptionGateway Integration Test', () => {
 
     describe('updatePlan()', () => {
         test('should update a plan', async () => {
-            const planId = plan.planId;
+            const { planId } = plan;
             const maxNumberOfCharges = faker.random.number().toString();
             const request: PlanRequest = {
                 maxNumberOfCharges,
@@ -97,7 +96,7 @@ describe('SubscriptionGateway Integration Test', () => {
 
     describe('getPlan()', () => {
         test('should get a plan', async () => {
-            const planId = plan.planId;
+            const { planId } = plan;
             const response: PlanResponse = await gateway.subscription.getPlan(planId);
             expect(response.planId).toEqual(planId);
         });
@@ -128,7 +127,7 @@ describe('SubscriptionGateway Integration Test', () => {
 
     describe('updateSubscription()', () => {
         test('should update a subscription', async () => {
-            const subscriptionId = subscription.subscriptionId;
+            const { subscriptionId } = subscription;
             const quantity = faker.random.number();
             const request: SubscriptionRequest = {
                 quantity,
@@ -144,7 +143,7 @@ describe('SubscriptionGateway Integration Test', () => {
 
     describe('getSubscription()', () => {
         test('should get a subscription', async () => {
-            const subscriptionId = subscription.subscriptionId;
+            const { subscriptionId } = subscription;
             const response: SubscriptionResponse = await gateway.subscription.getSubscription(subscriptionId);
             expect(response.subscriptionId).toEqual(subscriptionId);
         });
@@ -162,15 +161,15 @@ describe('SubscriptionGateway Integration Test', () => {
      */
 
     describe('createMerchantManagedSubscriptionCharge()', () => {
-       test('should create a charge', async () => {
-           const subscriptionId = merchantManagedSubscription.subscriptionId;
-           const request: ChargeRequest = {
-               amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
-               currency: 'USD',
-           };
-           const response: ChargeResponse = await gateway.subscription.createMerchantManagedSubscriptionCharge(subscriptionId, request);
-           expect(response.chargeId).toBeDefined();
-       });
+        test('should create a charge', async () => {
+            const { subscriptionId } = merchantManagedSubscription;
+            const request: ChargeRequest = {
+                amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
+                currency: 'USD',
+            };
+            const response: ChargeResponse = await gateway.subscription.createMerchantManagedSubscriptionCharge(subscriptionId, request);
+            expect(response.chargeId).toBeDefined();
+        });
     });
 
     describe('getSubscriptionCharge()', () => {
@@ -186,5 +185,4 @@ describe('SubscriptionGateway Integration Test', () => {
             expect(response.charges.length).toBeGreaterThan(0);
         });
     });
-
 });

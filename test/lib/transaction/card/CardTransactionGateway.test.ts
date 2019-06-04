@@ -8,7 +8,6 @@ import CaptureRequest from '../../../../src/lib/transaction/card/models/authCapt
 import AuthReversalRequest from '../../../../src/lib/transaction/card/models/authCapture/AuthReversalRequest';
 
 describe('CardTransactionGateway Integration Test', () => {
-
     let capturedTransaction: CardTransactionResponse;
     let authOnlyTransaction: CardTransactionResponse;
 
@@ -98,5 +97,4 @@ describe('CardTransactionGateway Integration Test', () => {
             expect(response.transactionId).toBeDefined();
         });
     });
-
 });

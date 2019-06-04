@@ -5,7 +5,6 @@ import VendorResponse from '../../../src/lib/marketplace/models/vendor/VendorRes
 import VendorsResponse from '../../../src/lib/marketplace/models/vendors/VendorsResponse';
 
 describe('MarketplaceGateway Integration Test', () => {
-
     let vendorId: number;
     const email = faker.internet.email();
     const country = faker.address.countryCode();
@@ -56,5 +55,4 @@ describe('MarketplaceGateway Integration Test', () => {
             expect(response.vendor.length).toBeGreaterThan(0);
         });
     });
-
 });

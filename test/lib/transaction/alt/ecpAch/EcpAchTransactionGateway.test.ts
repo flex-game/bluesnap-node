@@ -6,13 +6,12 @@ import AltTransactionEcpAchRequest
     from '../../../../../src/lib/transaction/alt/ecpAch/models/altTransactionEcpAch/AltTransactionEcpAchRequest';
 
 describe('EcpAchTransactionGateway Integration Test', () => {
-
     let ecpAchTransaction: AltTransactionEcpAchResponse;
 
     const mockEcpAch = {
         routingNumber: '011075150',
         accountType: <'CONSUMER_CHECKING'>'CONSUMER_CHECKING',
-        accountNumber: '4099999992'
+        accountNumber: '4099999992',
     };
 
     const mockPayerInfo = {
@@ -48,11 +47,10 @@ describe('EcpAchTransactionGateway Integration Test', () => {
 
     describe('get()', () => {
         test('should retrieve an ECP/ACH transaction', async () => {
-            const transactionId = ecpAchTransaction.transactionId;
+            const { transactionId } = ecpAchTransaction;
             const response: AltTransactionEcpAchResponse = await gateway.transaction.ecp.get(transactionId);
             expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });
-
 });
