@@ -11,7 +11,7 @@ export default interface PlanResponse extends ValidatedResponse {
     name: string;
     planId: number;
     currency: string;
-    maxNumberOfCharges: number;
+    maxNumberOfCharges: string;
     recurringChargeAmount: number;
     chargeOnPlanSwitch: boolean;
     status: 'ACTIVE' | 'INACTIVE';

@@ -58,9 +58,13 @@ describe('SubscriptionGateway Integration Test', () => {
     describe('updatePlan()', () => {
         test('should update a plan', async () => {
             const planId = plan.planId;
-            const maxNumberOfCharges = faker.random.number();
-            const request: Partial<PlanRequest> = {
+            const maxNumberOfCharges = faker.random.number().toString();
+            const request: PlanRequest = {
                 maxNumberOfCharges,
+                chargeFrequency: plan.chargeFrequency,
+                name: plan.name,
+                currency: plan.currency,
+                recurringChargeAmount: plan.recurringChargeAmount,
             };
             const response: PlanResponse = await gateway.subscription.updatePlan(planId, request);
             expect(response.planId).toEqual(planId);

@@ -1,8 +1,8 @@
 import * as faker from 'faker';
+import gateway from '../../bluesnap/BlueSnapTestClient';
 import AuthCaptureRequest from '../../../../src/lib/transaction/card/models/authCapture/AuthCaptureRequest';
 import CardTransactionResponse
     from '../../../../src/lib/transaction/card/models/cardTransaction/CardTransactionResponse';
-import gateway from '../../bluesnap/BlueSnapTestClient';
 import AuthRequest from '../../../../src/lib/transaction/card/models/authCapture/AuthRequest';
 import CaptureRequest from '../../../../src/lib/transaction/card/models/authCapture/CaptureRequest';
 import AuthReversalRequest from '../../../../src/lib/transaction/card/models/authCapture/AuthReversalRequest';
@@ -35,7 +35,7 @@ describe('CardTransactionGateway Integration Test', () => {
         });
     }
 
-    beforeAll(createCardTransactions);
+    beforeAll(createCardTransactions, 150000);
 
     describe('authCapture()', () => {
         test('should authorize and capture a new card transaction', async () => {
@@ -56,6 +56,7 @@ describe('CardTransactionGateway Integration Test', () => {
                 currency: 'USD',
                 amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
                 cardTransactionType: 'AUTH_ONLY',
+                creditCard: mockCreditCard,
             };
             const response: CardTransactionResponse = await gateway.transaction.card.authOnly(request);
             expect(response.transactionId).toBeDefined();

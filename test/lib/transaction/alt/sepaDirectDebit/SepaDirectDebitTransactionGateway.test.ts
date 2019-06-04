@@ -48,6 +48,7 @@ describe('SepaDirectDebitTransactionGateway Integration Test', () => {
         test('should retrieve a SEPA direct debit transaction', async () => {
             const transactionId = sepaDdTransaction.transactionId;
             const response: AltTransactionSepaDdResponse = await gateway.transaction.sepadd.get(transactionId);
+            expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });
