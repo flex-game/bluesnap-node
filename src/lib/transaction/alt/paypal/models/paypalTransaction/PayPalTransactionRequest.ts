@@ -10,4 +10,5 @@ export default interface PayPalTransactionRequest {
     inContext?: boolean;
     recurring?: string;
     paypalSubscriptionId?: string;
+    orderId?: string;
 }
