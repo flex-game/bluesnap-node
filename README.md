@@ -52,3 +52,5 @@ await gateway.refund.refund('transactionId'); // The Transaction Id
 ```
 const wallet = await gateway.wallet.get('walletId'); // Wallet Id
 ```
+
+For more examples check out tests located in the `test` directory.
