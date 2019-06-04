@@ -1,9 +1,9 @@
+import * as faker from 'faker';
 import gateway from '../../../bluesnap/BlueSnapTestClient';
 import AltTransactionSepaDdResponse
     from '../../../../../src/lib/transaction/alt/sepaDirectDebit/models/altTransactionSepaDirectDebit/AltTransactionSepaDdResponse';
 import AltTransactionSepaDdRequest
     from '../../../../../src/lib/transaction/alt/sepaDirectDebit/models/altTransactionSepaDirectDebit/AltTransactionSepaDdRequest';
-import * as faker from 'faker';
 
 describe('SepaDirectDebitTransactionGateway Integration Test', () => {
 

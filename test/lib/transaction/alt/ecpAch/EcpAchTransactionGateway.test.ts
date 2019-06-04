@@ -1,3 +1,4 @@
+import * as faker from 'faker';
 import AltTransactionEcpAchResponse
     from '../../../../../src/lib/transaction/alt/ecpAch/models/altTransactionEcpAch/AltTransactionEcpAchResponse';
 import gateway from '../../../bluesnap/BlueSnapTestClient';
@@ -14,10 +15,18 @@ describe('EcpAchTransactionGateway Integration Test', () => {
         accountNumber: '4099999992'
     };
 
+    const mockPayerInfo = {
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+    };
+
     async function createEcpAchTransaction() {
         ecpAchTransaction = await gateway.transaction.ecp.create({
             authorizedByShopper: true,
             ecpTransaction: mockEcpAch,
+            amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
+            currency: 'USD',
+            payerInfo: mockPayerInfo,
         });
     }
 
@@ -28,6 +37,9 @@ describe('EcpAchTransactionGateway Integration Test', () => {
             const request: AltTransactionEcpAchRequest = {
                 authorizedByShopper: true,
                 ecpTransaction: mockEcpAch,
+                amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
+                currency: 'USD',
+                payerInfo: mockPayerInfo,
             };
             const response: AltTransactionEcpAchResponse = await gateway.transaction.ecp.create(request);
             expect(response.transactionId).toBeDefined();
