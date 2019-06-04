@@ -5,7 +5,7 @@ import MasterpassWalletRequest from '../../../src/lib/wallet/models/masterpassWa
 import MasterpassWalletResponse from '../../../src/lib/wallet/models/masterpassWallet/MasterpassWalletResponse';
 import VisaCheckoutWalletRequest from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletRequest';
 import VisaCheckoutWalletResponse from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletResponse';
-import RetrievedWalletResponse from '../../../src/lib/wallet/models/retrievedWallet/RetrievedWalletResponse';
+import GetWalletResponse from '../../../src/lib/wallet/models/retrievedWallet/GetWalletResponse';
 
 describe('WalletGateway Integration Test', () => {
 
@@ -63,7 +63,7 @@ describe('WalletGateway Integration Test', () => {
     describe('get()', () => {
         test('should retrieve a wallet', async () => {
             const walletId = wallet.walletId;
-            const response: RetrievedWalletResponse = await gateway.wallet.get(walletId);
+            const response: GetWalletResponse = await gateway.wallet.get(walletId);
             expect(response.creditCard).toBeDefined();
             expect(response.country).toBeDefined();
         });

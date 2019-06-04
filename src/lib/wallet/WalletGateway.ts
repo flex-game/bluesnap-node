@@ -7,7 +7,7 @@ import MasterpassWalletResponse from './models/masterpassWallet/MasterpassWallet
 import VisaCheckoutWalletResponse from './models/visaCheckoutWallet/VisaCheckoutWalletResponse';
 import OnboardApplePayResponse from './models/onboardApplePay/OnboardApplePayResponse';
 import OnboardApplePayRequest from './models/onboardApplePay/OnboardApplePayRequest';
-import RetrievedWalletResponse from './models/retrievedWallet/RetrievedWalletResponse';
+import GetWalletResponse from './models/retrievedWallet/GetWalletResponse';
 
 export default class WalletGateway {
     private http: HttpClient;
@@ -35,7 +35,7 @@ export default class WalletGateway {
     }
 
     // The Retrieve Wallet request is supported for Masterpass and Visa Checkout.
-    public async get(walletId: number): Promise<RetrievedWalletResponse> {
+    public async get(walletId: number): Promise<GetWalletResponse> {
         const path = `/services/2/wallets/${walletId}`;
         return this.http.get(path);
     }
