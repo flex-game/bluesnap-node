@@ -1,0 +1,4 @@
+environment: 'Sandbox'
+username: <%= ENV['BLUESNAP_USERNAME'] %>
+password: <%= ENV['BLUESNAP_PASSWORD'] %>
+bluesnapVersion: '2.0'
