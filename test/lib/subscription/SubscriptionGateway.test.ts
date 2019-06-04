@@ -17,6 +17,22 @@ describe('SubscriptionGateway Integration Test', () => {
     let merchantManagedSubscription: SubscriptionResponse;
     let charge: ChargeResponse;
 
+    const mockPayerInfo = {
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+    };
+
+    const mockPaymentSource = {
+        creditCardInfo: {
+            creditCard: {
+                expirationMonth: '07',
+                expirationYear: '2019',
+                cardNumber: '4111111111111111',
+                securityCode: '111',
+            },
+        },
+    };
+
     async function createPlansAndSubscriptions() {
         plan = await gateway.subscription.createPlan({
             chargeFrequency: 'ANNUALLY',
@@ -26,17 +42,24 @@ describe('SubscriptionGateway Integration Test', () => {
         });
 
         subscription = await gateway.subscription.createSubscription({
-            planId: plan.planId
+            planId: plan.planId,
+            payerInfo: mockPayerInfo,
+            paymentSource: mockPaymentSource,
         });
 
         merchantManagedSubscription = await gateway.subscription.createMerchantManagedSubscription({
-            planId: plan.planId
+            planId: plan.planId,
+            payerInfo: mockPayerInfo,
+            paymentSource: mockPaymentSource,
         });
 
-        charge = await gateway.subscription.createMerchantManagedSubscriptionCharge(merchantManagedSubscription.subscriptionId, {currency: 'USD'});
+        charge = await gateway.subscription.createMerchantManagedSubscriptionCharge(merchantManagedSubscription.subscriptionId, {
+            amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
+            currency: 'USD',
+        });
     }
 
-    beforeAll(createPlansAndSubscriptions);
+    beforeAll(createPlansAndSubscriptions, 15000);
 
     /**
      * Plans
@@ -95,6 +118,8 @@ describe('SubscriptionGateway Integration Test', () => {
         test('should create a new subscription', async () => {
             const request: SubscriptionRequest = {
                 planId: plan.planId,
+                payerInfo: mockPayerInfo,
+                paymentSource: mockPaymentSource,
             };
             const response: SubscriptionResponse = await gateway.subscription.createSubscription(request);
             expect(response.planId).toBeDefined();
@@ -105,8 +130,11 @@ describe('SubscriptionGateway Integration Test', () => {
         test('should update a subscription', async () => {
             const subscriptionId = subscription.subscriptionId;
             const quantity = faker.random.number();
-            const request: Partial<SubscriptionRequest> = {
+            const request: SubscriptionRequest = {
                 quantity,
+                planId: plan.planId,
+                payerInfo: mockPayerInfo,
+                paymentSource: mockPaymentSource,
             };
             const response: SubscriptionResponse = await gateway.subscription.updateSubscription(subscriptionId, request);
             expect(response.subscriptionId).toEqual(subscriptionId);
@@ -137,6 +165,7 @@ describe('SubscriptionGateway Integration Test', () => {
        test('should create a charge', async () => {
            const subscriptionId = merchantManagedSubscription.subscriptionId;
            const request: ChargeRequest = {
+               amount: faker.random.number({ min: 0, max: 1000, precision: 0.01 }),
                currency: 'USD',
            };
            const response: ChargeResponse = await gateway.subscription.createMerchantManagedSubscriptionCharge(subscriptionId, request);

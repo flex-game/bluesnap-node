@@ -26,6 +26,10 @@ export default class HttpClient {
             body: JSON.stringify(body),
         });
 
+        if (response.status === 201) {
+            return response;
+        }
+
         return await response.json();
     }
 
@@ -35,6 +39,10 @@ export default class HttpClient {
             headers: this.getHeaders(),
             body: JSON.stringify(body),
         });
+
+        if (response.status === 204) {
+            return null;
+        }
 
         return await response.json();
     }

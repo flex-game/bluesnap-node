@@ -11,7 +11,7 @@ describe('EcpAchTransactionGateway Integration Test', () => {
 
     const mockEcpAch = {
         routingNumber: '011075150',
-        accountType: 'CONSUMER_CHECKING',
+        accountType: <'CONSUMER_CHECKING'>'CONSUMER_CHECKING',
         accountNumber: '4099999992'
     };
 
@@ -50,6 +50,7 @@ describe('EcpAchTransactionGateway Integration Test', () => {
         test('should retrieve an ECP/ACH transaction', async () => {
             const transactionId = ecpAchTransaction.transactionId;
             const response: AltTransactionEcpAchResponse = await gateway.transaction.ecp.get(transactionId);
+            expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });

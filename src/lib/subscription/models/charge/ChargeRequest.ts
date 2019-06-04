@@ -9,7 +9,7 @@ import ThreeDSecureRequest from '../../../transaction/models/threeDSecure/ThreeD
  * Contains information about a specific recurring subscription charge
  */
 export default interface ChargeRequest {
-    amount?: number;
+    amount: number;
     currency: string;
     vaultedShopperId?: number;
     payerInfo?: PayerInfoRequest;

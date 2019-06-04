@@ -66,7 +66,7 @@ export default class SubscriptionGateway {
         return this.http.post(path, body);
     }
 
-    public async updateSubscription(subscriptionId: number, updates: Partial<SubscriptionRequest>): Promise<SubscriptionResponse> {
+    public async updateSubscription(subscriptionId: number, updates: SubscriptionRequest): Promise<SubscriptionResponse> {
         const path = `/services/2/recurring/subscriptions/${subscriptionId}`;
         const body = updates;
         return this.http.put(path, body);

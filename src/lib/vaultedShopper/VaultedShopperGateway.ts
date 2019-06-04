@@ -23,6 +23,6 @@ export default class VaultedShopperGateway {
 
     public async get(shopperId: number): Promise<VaultedShopperResponse> {
         const path = `/services/2/vaulted-shoppers/${shopperId}`;
-        return this.http.put(path);
+        return this.http.get(path);
     }
 }

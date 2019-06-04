@@ -57,6 +57,7 @@ describe('PayPalTransactionGatewat Integration Test', () => {
         test('should retrieve a PayPal transaction', async () => {
             const transactionId = paypalTransaction.transactionId;
             const response: AltTransactionPayPalResponse = await gateway.transaction.paypal.get(transactionId);
+            expect(response.transactionId).toBeDefined();
             expect(response.transactionId).toEqual(transactionId);
         });
     });

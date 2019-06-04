@@ -26,8 +26,9 @@ describe('CardTransactionGateway Integration Test', () => {
 
     describe('refund()', () => {
         test('should refund a transaction', async () => {
-            const response = await gateway.refund.refund(transaction.transactionId);
-            expect(response.message).toBeUndefined(); // no error
+            const transactionId = transaction.transactionId;
+            const response = await gateway.refund.refund(transactionId);
+            expect(response).toBeNull(); // Null response; no errors.
         });
     });
 

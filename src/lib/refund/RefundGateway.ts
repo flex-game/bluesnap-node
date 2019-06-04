@@ -1,6 +1,5 @@
 import * as querystring from 'querystring';
 import HttpClient from '../http/HttpClient';
-import ValidatedResponse from '../errors/models/ValidatedResponse';
 
 export default class RefundGateway {
     private http: HttpClient;
@@ -9,9 +8,9 @@ export default class RefundGateway {
         this.http = http;
     }
 
-    public async refund(transactionId: string, params?: RefundQueryParams): Promise<ValidatedResponse> {
+    public async refund(transactionId: string, params?: RefundQueryParams): Promise<null> {
         const queryParams = querystring.stringify(params);
-        const path = `/services/2/transaction/${transactionId}/refund?${queryParams}`;
+        const path = `/services/2/transactions/${transactionId}/refund?${queryParams}`;
         return this.http.put(path);
     }
 }

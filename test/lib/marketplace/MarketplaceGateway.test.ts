@@ -6,12 +6,14 @@ import VendorsResponse from '../../../src/lib/marketplace/models/vendors/Vendors
 
 describe('MarketplaceGateway Integration Test', () => {
 
-    let vendor: VendorResponse;
+    let vendorId: number;
+    const email = faker.internet.email();
+    const country = faker.address.countryCode();
 
     async function createVendor() {
-        vendor = await gateway.marketplace.create({
-            email: faker.internet.email(),
-            country: faker.address.countryCode(),
+        vendorId = await gateway.marketplace.create({
+            email,
+            country,
         });
     }
 
@@ -23,27 +25,26 @@ describe('MarketplaceGateway Integration Test', () => {
                 email: faker.internet.email(),
                 country: faker.address.countryCode(),
             };
-            const response: VendorResponse = await gateway.marketplace.create(request);
-            expect(response.vendorId).toBeDefined();
+            const response = await gateway.marketplace.create(request);
+            expect(response).toBeDefined();
         });
     });
 
     describe('update()', () => {
         test('should update a vendor', async () => {
-            const vendorId = vendor.vendorId;
             const zip = faker.address.zipCode();
-            const request: Partial<VendorRequest> = {
+            const request: VendorRequest = {
                 zip,
+                email,
+                country,
             };
-            const response: VendorResponse = await gateway.marketplace.update(vendorId, request);
-            expect(response.vendorId).toEqual(vendorId);
-            expect(response.zip).toEqual(zip);
+            const response = await gateway.marketplace.update(vendorId, request);
+            expect(response).toBeNull();
         });
     });
 
     describe('get()', () => {
         test('should get a vendor', async () => {
-            const vendorId = vendor.vendorId;
             const response: VendorResponse = await gateway.marketplace.get(vendorId);
             expect(response.vendorId).toEqual(vendorId);
         });

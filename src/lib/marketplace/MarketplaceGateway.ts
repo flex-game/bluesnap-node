@@ -11,13 +11,19 @@ export default class MarketplaceGateway {
         this.http = http;
     }
 
-    public async create(vendor: VendorRequest): Promise<VendorResponse> {
+    public async create(vendor: VendorRequest): Promise<number> {
         const path = '/services/2/vendors';
         const body = vendor;
-        return this.http.post(path, body);
+        const response = await this.http.post(path, body);
+
+        try {
+            return parseInt(response.headers.get('location').split('/').pop()); // Get the vendorId
+        } catch {
+            throw new Error('Could not parse vendorId from response.');
+        }
     }
 
-    public async update(vendorId: number, updates: Partial<VendorRequest>): Promise<VendorResponse> {
+    public async update(vendorId: number, updates: VendorRequest): Promise<null> {
         const path = `/services/2/vendors/${vendorId}`;
         const body = updates;
         return this.http.put(path, body);
