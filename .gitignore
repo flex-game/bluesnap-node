@@ -16,6 +16,7 @@ pids
 
 # Test reports
 test-reports
+coverage
 
 # Typescript
 dist
