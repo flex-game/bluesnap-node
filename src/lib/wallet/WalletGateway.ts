@@ -35,7 +35,7 @@ export default class WalletGateway {
     }
 
     // The Retrieve Wallet request is supported for Masterpass and Visa Checkout.
-    public async get(walletId: string): Promise<RetrievedWalletResponse> {
+    public async get(walletId: number): Promise<RetrievedWalletResponse> {
         const path = `/services/2/wallets/${walletId}`;
         return this.http.get(path);
     }
