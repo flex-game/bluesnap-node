@@ -9,7 +9,7 @@
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint --fix \"src/**\"",
     "test": "NODE_ENV=test npx jest --testPathPattern='test' --detectOpenHandles --forceExit",
-    "test:ci": "NODE_ENV=test-ci npm run test -- --ci --coverage --silent"
+    "test:ci": "NODE_ENV=test-ci npx jest --testPathPattern='test' --detectOpenHandles --forceExit --ci --coverage --silent"
   },
   "repository": {
     "type": "git",
