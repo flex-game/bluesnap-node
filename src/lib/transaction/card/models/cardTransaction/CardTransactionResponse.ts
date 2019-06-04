@@ -8,11 +8,12 @@ import ProcessingInfoResponse from '../../../models/processingInfo/ProcessingInf
 import CreditCardResponse from '../creditCard/CreditCardResponse';
 import CardHolderInfoResponse from '../cardHolderInfo/CardHolderInfoResponse';
 import WalletResponse from '../../../../wallet/models/wallet/WalletResponse';
+import ValidatedResponse from '../../../../errors/models/ValidatedResponse';
 
 /**
  * Contains the information required to process a credit card transaction
  */
-export default interface CardTransactionResponse {
+export default interface CardTransactionResponse extends ValidatedResponse {
     walletId?: number;
     wallet?: WalletResponse;
     amount: number;

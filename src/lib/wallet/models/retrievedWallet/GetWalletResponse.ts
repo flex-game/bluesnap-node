@@ -2,7 +2,7 @@ import CreditCardResponse from '../../../transaction/card/models/creditCard/Cred
 import BillingContactInfoResponse from '../../../vaultedShopper/models/billingContactInfo/BillingContactInfoResponse';
 import ShippingContactInfoResponse from '../../../vaultedShopper/models/shippingContactInfo/ShippingContactInfoResponse';
 
-export default interface RetrievedWalletResponse {
+export default interface GetWalletResponse {
     firstName: string;
     lastName: string;
     email: string;

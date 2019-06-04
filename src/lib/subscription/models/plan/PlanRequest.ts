@@ -8,7 +8,7 @@ export default interface PlanRequest {
     initialChargeAmount?: number;
     name: string;
     currency: string;
-    maxNumberOfCharges?: number;
+    maxNumberOfCharges?: string;
     recurringChargeAmount: number;
     chargeOnPlanSwitch?: boolean;
     status?: 'ACTIVE' | 'INACTIVE';

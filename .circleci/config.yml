@@ -1,0 +1,22 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/bluesnap-node
+    docker:
+      - image: videoblocks/circleci-docker-base:latest
+
+    steps:
+      - checkout
+
+      - run: npm install
+
+      - run:
+          name: Run all tests.
+          command: npm run test:ci
+
+      - store_test_results:
+          path: test-reports
+
+      - store_artifacts:
+          path: test-reports
+          destination: test-reports

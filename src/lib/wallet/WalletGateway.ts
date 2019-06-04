@@ -7,8 +7,7 @@ import MasterpassWalletResponse from './models/masterpassWallet/MasterpassWallet
 import VisaCheckoutWalletResponse from './models/visaCheckoutWallet/VisaCheckoutWalletResponse';
 import OnboardApplePayResponse from './models/onboardApplePay/OnboardApplePayResponse';
 import OnboardApplePayRequest from './models/onboardApplePay/OnboardApplePayRequest';
-import RetrievedWalletResponse from './models/retrievedWallet/RetrievedWalletResponse';
-import ErrorResponse from '../errors/models/ErrorResponse';
+import GetWalletResponse from './models/retrievedWallet/GetWalletResponse';
 
 export default class WalletGateway {
     private http: HttpClient;
@@ -23,20 +22,20 @@ export default class WalletGateway {
         return this.http.post(path, body);
     }
 
-    public async createApplePayWallet(wallet: ApplePayWalletRequest): Promise<ApplePayWalletResponse | ErrorResponse> {
+    public async createApplePayWallet(wallet: ApplePayWalletRequest): Promise<ApplePayWalletResponse> {
         return this.create(wallet);
     }
 
-    public async createMasterpassWallet(wallet: MasterpassWalletRequest): Promise<MasterpassWalletResponse | ErrorResponse> {
+    public async createMasterpassWallet(wallet: MasterpassWalletRequest): Promise<MasterpassWalletResponse> {
         return this.create(wallet);
     }
 
-    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse | ErrorResponse> {
+    public async createVisaCheckoutWallet(wallet: VisaCheckoutWalletRequest): Promise<VisaCheckoutWalletResponse> {
         return this.create(wallet);
     }
 
     // The Retrieve Wallet request is supported for Masterpass and Visa Checkout.
-    public async get(walletId: string): Promise<RetrievedWalletResponse | ErrorResponse> {
+    public async get(walletId: number): Promise<GetWalletResponse> {
         const path = `/services/2/wallets/${walletId}`;
         return this.http.get(path);
     }
@@ -52,7 +51,7 @@ export default class WalletGateway {
         return this.http.post(path, body);
     }
 
-    public async getApplePayOnboardInfo(onboardingId: string): Promise<OnboardApplePayResponse | ErrorResponse> {
+    public async getApplePayOnboardInfo(onboardingId: string): Promise<OnboardApplePayResponse> {
         const path = `/services/2/wallets/onboarding/${onboardingId}`;
         return this.http.get(path);
     }

@@ -18,7 +18,7 @@ export default interface SubscriptionRequest {
     overrideTrialPeriodDays?: number;
     overrideRecurringChargeAmount?: number;
     overrrideInitialChargeAmount?: number;
-    transactionFraudInfo: TransactionFraudInfoRequest;
+    transactionFraudInfo?: TransactionFraudInfoRequest;
     autoRenew?: boolean;
     authorizedByShopper?: boolean;
     nextChargeDate?: string;

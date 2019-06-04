@@ -5,11 +5,12 @@ import FraudResultInfoResponse from '../../../transaction/models/fraudResultInfo
 import RefundsResponse from '../../../refund/models/refunds/RefundsResponse';
 import Level3DataResponse from '../../../transaction/models/level3Data/Level3DataResponse';
 import ThreeDSecureResponse from '../../../transaction/models/threeDSecure/ThreeDSecureResponse';
+import ValidatedResponse from '../../../errors/models/ValidatedResponse';
 
 /**
  * Contains information about a specific recurring subscription charge
  */
-export default interface ChargeResponse {
+export default interface ChargeResponse extends ValidatedResponse {
     chargeId: number;
     subscriptionId: number;
     planId: number;

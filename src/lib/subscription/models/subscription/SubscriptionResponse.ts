@@ -4,11 +4,12 @@ import ChargeResponse from '../charge/ChargeResponse';
 import FraudResultInfoResponse from '../../../transaction/models/fraudResultInfo/FraudResultInfoResponse';
 import Level3DataResponse from '../../../transaction/models/level3Data/Level3DataResponse';
 import ThreeDSecureResponse from '../../../transaction/models/threeDSecure/ThreeDSecureResponse';
+import ValidatedResponse from '../../../errors/models/ValidatedResponse';
 
 /**
  * Contains information about a specific subscription
  */
-export default interface SubscriptionResponse {
+export default interface SubscriptionResponse extends ValidatedResponse {
     subscriptionId: number;
     planId: number;
     vaultedShopperId: number;

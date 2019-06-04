@@ -3,11 +3,12 @@ import TransactionFraudInfoResponse from '../../../transaction/models/transactio
 import ShippingContactInfoResponse from '../shippingContactInfo/ShippingContactInfoResponse';
 import LastPaymentInfoResponse from '../lastPaymentInfo/LastPaymentInfoResponse';
 import PaymentSourcesResponse from '../paymentSources/PaymentSourcesResponse';
+import ValidatedResponse from '../../../errors/models/ValidatedResponse';
 
 /**
  * Contains information about the vaulted shopper
  */
-export default interface VaultedShopperResponse {
+export default interface VaultedShopperResponse extends ValidatedResponse {
     vaultedShopperId: number;
     firstName: string;
     lastName: string;
