@@ -2,8 +2,8 @@
   "name": "bluesnap-node",
   "version": "0.1.0",
   "description": "BlueSnap Node SDK",
-  "main": "index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/bluesnap/BlueSnapGateway.js",
+  "types": "dist/bluesnap/BlueSnapGateway.d.ts",
   "files": [
     "dist"
   ],
