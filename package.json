@@ -1,11 +1,15 @@
 {
-  "name": "bluesnap-node",
+  "name": "bluesnap",
   "version": "0.1.0",
-  "description": "BlueSnap Node SDK",
-  "main": "index.js",
+  "description": "Node SDK for the BlueSnap Payment Gateway",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "compile": "tsc && copyfiles 'src/**/*' dist -e '**/*.ts' -e '**/*/*.js'",
+    "compile": "npm run generate-barrels && tsc --declaration",
+    "generate-barrels": "barrelsby -d src/lib --singleQuotes --delete",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint --fix \"src/**\"",
     "test": "NODE_ENV=test npx jest --testPathPattern='test' --detectOpenHandles --forceExit",
@@ -34,23 +38,22 @@
     "@types/config": "0.0.34",
     "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.13",
-    "@types/node": "^10.12.18",
+    "@types/node": "^10.14.8",
     "@types/node-fetch": "^2.3.4",
-    "@types/readable-stream": "^2.3.1",
-    "@typescript-eslint/eslint-plugin": "^1.4.2",
-    "@typescript-eslint/parser": "^1.4.2",
+    "@typescript-eslint/eslint-plugin": "^1.9.0",
+    "@typescript-eslint/parser": "^1.9.0",
+    "barrelsby": "^2.1.1",
     "config": "^3.1.0",
-    "copyfiles": "^2.1.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-typescript": "^1.1.1",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.3",
     "faker": "^4.1.0",
     "jest": "^24.8.0",
     "jest-junit": "^6.4.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^3.3.0",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.5.1"
   },
   "jest": {
     "globals": {

@@ -1,9 +1,8 @@
 import * as faker from 'faker';
-import CardTransactionResponse from '../../../src/lib/transaction/card/models/cardTransaction/CardTransactionResponse';
 import gateway from '../bluesnap/BlueSnapTestClient';
+import {CardTransactionResponse} from '../../../src/lib/transaction/card/models/CardTransaction';
 
 describe('CardTransactionGateway Integration Test', () => {
-
     let transaction: CardTransactionResponse;
 
     const mockCreditCard = {
@@ -26,10 +25,9 @@ describe('CardTransactionGateway Integration Test', () => {
 
     describe('refund()', () => {
         test('should refund a transaction', async () => {
-            const transactionId = transaction.transactionId;
+            const { transactionId } = transaction;
             const response = await gateway.refund.refund(transactionId);
             expect(response).toBeNull(); // Null response; no errors.
         });
     });
-
 });

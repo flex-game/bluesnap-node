@@ -1,4 +1,4 @@
-enum AltTransactionErrors {
+export enum AltTransactionErrors {
     INVALID_API_VERSION = 'INVALID_API_VERSION',
     VALIDATION_GENERAL_FAILURE = 'VALIDATION_GENERAL_FAILURE',
     XSS_EXCEPTION = 'XSS_EXCEPTION',
@@ -23,5 +23,3 @@ enum AltTransactionErrors {
     SUBSCRIPTION_NOT_FOUND = 'SUBSCRIPTION_NOT_FOUND',
     MISSING_ARGUMENTS = 'MISSING_ARGUMENTS'
 }
-
-export default AltTransactionErrors;

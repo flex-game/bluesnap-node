@@ -1,9 +1,7 @@
 import HttpClient from '../../../http/HttpClient';
-import AltTransactionSepaDdRequest from './models/altTransactionSepaDirectDebit/AltTransactionSepaDdRequest';
-import AltTransactionSepaDdResponse from './models/altTransactionSepaDirectDebit/AltTransactionSepaDdResponse';
-import ValidatedResponse from '../../../errors/models/ValidatedResponse';
+import {AltTransactionSepaDdRequest, AltTransactionSepaDdResponse} from './models/AltTransactionSepaDirectDebit';
 
-export default class SepaDdTransactionGatewayTransactionGateway {
+export default class SepaDdTransactionGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

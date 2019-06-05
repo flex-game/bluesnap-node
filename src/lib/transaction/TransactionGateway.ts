@@ -5,7 +5,7 @@ import SepaDdTransactionGateway from './alt/sepaDirectDebit/SepaDdTransactionGat
 import PayPalTransactionGateway from './alt/paypal/PayPalTransactionGateway';
 import HttpClient from '../http/HttpClient';
 
-export default class MarketplaceGateway {
+export default class TransactionGateway {
     private http: HttpClient;
 
     public card: CardTransactionGateway;

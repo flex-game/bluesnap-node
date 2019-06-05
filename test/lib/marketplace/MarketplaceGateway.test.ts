@@ -1,11 +1,9 @@
 import * as faker from 'faker';
 import gateway from '../bluesnap/BlueSnapTestClient';
-import VendorRequest from '../../../src/lib/marketplace/models/vendor/VendorRequest';
-import VendorResponse from '../../../src/lib/marketplace/models/vendor/VendorResponse';
-import VendorsResponse from '../../../src/lib/marketplace/models/vendors/VendorsResponse';
+import {VendorRequest, VendorResponse} from '../../../src/lib/marketplace/models/Vendor';
+import {VendorsResponse} from '../../../src/lib/marketplace/models/Vendors';
 
 describe('MarketplaceGateway Integration Test', () => {
-
     let vendorId: number;
     const email = faker.internet.email();
     const country = faker.address.countryCode();
@@ -56,5 +54,4 @@ describe('MarketplaceGateway Integration Test', () => {
             expect(response.vendor.length).toBeGreaterThan(0);
         });
     });
-
 });

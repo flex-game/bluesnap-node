@@ -1,14 +1,10 @@
 import gateway from '../bluesnap/BlueSnapTestClient';
-import ApplePayWalletResponse from '../../../src/lib/wallet/models/applePayWallet/ApplePayWalletResponse';
-import ApplePayWalletRequest from '../../../src/lib/wallet/models/applePayWallet/ApplePayWalletRequest';
-import MasterpassWalletRequest from '../../../src/lib/wallet/models/masterpassWallet/MasterpassWalletRequest';
-import MasterpassWalletResponse from '../../../src/lib/wallet/models/masterpassWallet/MasterpassWalletResponse';
-import VisaCheckoutWalletRequest from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletRequest';
-import VisaCheckoutWalletResponse from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletResponse';
-import GetWalletResponse from '../../../src/lib/wallet/models/retrievedWallet/GetWalletResponse';
+import {ApplePayWalletRequest, ApplePayWalletResponse} from '../../../src/lib/wallet/models/ApplePayWallet';
+import {VisaCheckoutWalletRequest, VisaCheckoutWalletResponse} from '../../../src/lib/wallet/models/VisaCheckoutWallet';
+import {MasterpassWalletRequest, MasterpassWalletResponse} from '../../../src/lib/wallet/models/MasterpassWallet';
+import {GetWalletResponse} from '../../../src/lib/wallet/models/GetWallet';
 
 describe('WalletGateway Integration Test', () => {
-
     let wallet: VisaCheckoutWalletResponse;
 
     async function createWallet() {
@@ -25,7 +21,7 @@ describe('WalletGateway Integration Test', () => {
             const request: ApplePayWalletRequest = {
                 walletType: 'APPLE_PAY',
                 validationUrl: 'https://apple-pay-gateway-cert.apple.com/paymentservices/startSession',
-                domainName: 'storyblocks.com'
+                domainName: 'storyblocks.com',
             };
             const response: ApplePayWalletResponse = await gateway.wallet.createApplePayWallet(request);
 
@@ -62,7 +58,7 @@ describe('WalletGateway Integration Test', () => {
 
     describe('get()', () => {
         test('should retrieve a wallet', async () => {
-            const walletId = wallet.walletId;
+            const { walletId } = wallet;
             const response: GetWalletResponse = await gateway.wallet.get(walletId);
             expect(response.creditCard).toBeDefined();
             expect(response.country).toBeDefined();

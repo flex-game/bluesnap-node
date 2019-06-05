@@ -8,6 +8,7 @@
 node_modules
 .npm
 npm-debug.log*
+package
 
 # Runtime data
 pids
