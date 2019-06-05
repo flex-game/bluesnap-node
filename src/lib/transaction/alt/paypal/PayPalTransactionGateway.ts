@@ -1,5 +1,5 @@
-import {HttpClient} from '../../../http/HttpClient';
-import {AltTransactionPayPalRequest, AltTransactionPayPalResponse} from './models/AltTransactionPayPal';
+import { HttpClient } from '../../../http/HttpClient';
+import { AltTransactionPayPalRequest, AltTransactionPayPalResponse } from './models/AltTransactionPayPal';
 
 export class PayPalTransactionGateway {
     private http: HttpClient;

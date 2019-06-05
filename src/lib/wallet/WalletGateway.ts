@@ -1,9 +1,9 @@
-import {HttpClient} from '../http/HttpClient';
-import {ApplePayWalletRequest, ApplePayWalletResponse} from './models/ApplePayWallet';
-import {MasterpassWalletRequest, MasterpassWalletResponse} from './models/MasterpassWallet';
-import {VisaCheckoutWalletRequest, VisaCheckoutWalletResponse} from './models/VisaCheckoutWallet';
-import {GetWalletResponse} from './models/GetWallet';
-import {OnboardApplePayRequest, OnboardApplePayResponse} from './models/OnboardApplePay';
+import { HttpClient } from '../http/HttpClient';
+import { ApplePayWalletRequest, ApplePayWalletResponse } from './models/ApplePayWallet';
+import { MasterpassWalletRequest, MasterpassWalletResponse } from './models/MasterpassWallet';
+import { VisaCheckoutWalletRequest, VisaCheckoutWalletResponse } from './models/VisaCheckoutWallet';
+import { GetWalletResponse } from './models/GetWallet';
+import { OnboardApplePayRequest, OnboardApplePayResponse } from './models/OnboardApplePay';
 
 export class WalletGateway {
     private http: HttpClient;

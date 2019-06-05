@@ -1,9 +1,9 @@
-import {WalletTransactionGateway} from './wallet/WalletTransactionGateway';
-import {EcpAchTransactionGateway} from './alt/ecpAch/EcpAchTransactionGateway';
-import {SepaDdTransactionGateway} from './alt/sepaDirectDebit/SepaDdTransactionGateway';
-import {HttpClient} from '../http/HttpClient';
-import {CardTransactionGateway} from './card/CardTransactionGateway';
-import {PayPalTransactionGateway} from './alt/paypal/PayPalTransactionGateway';
+import { WalletTransactionGateway } from './wallet/WalletTransactionGateway';
+import { EcpAchTransactionGateway } from './alt/ecpAch/EcpAchTransactionGateway';
+import { SepaDdTransactionGateway } from './alt/sepaDirectDebit/SepaDdTransactionGateway';
+import { HttpClient } from '../http/HttpClient';
+import { CardTransactionGateway } from './card/CardTransactionGateway';
+import { PayPalTransactionGateway } from './alt/paypal/PayPalTransactionGateway';
 
 export class TransactionGateway {
     private http: HttpClient;

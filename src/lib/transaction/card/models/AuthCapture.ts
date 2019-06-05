@@ -1,11 +1,11 @@
-import {ThreeDSecureRequest} from '../../models/ThreeDSecure';
-import {TransactionMetaDataRequest} from '../../models/TransactionMetaData';
-import {Level3DataRequest} from '../../models/Level3Data';
-import {CardHolderInfoRequest} from './CardHolderInfo';
-import {CreditCardRequest} from './CreditCard';
-import {WalletRequest} from '../../../wallet/models/Wallet';
-import {VendorsInfoRequest} from '../../../marketplace/models/VendorsInfo';
-import {TransactionFraudInfoRequest} from '../../models/TransactionFraudInfo';
+import { ThreeDSecureRequest } from '../../models/ThreeDSecure';
+import { TransactionMetaDataRequest } from '../../models/TransactionMetaData';
+import { Level3DataRequest } from '../../models/Level3Data';
+import { CardHolderInfoRequest } from './CardHolderInfo';
+import { CreditCardRequest } from './CreditCard';
+import { WalletRequest } from '../../../wallet/models/Wallet';
+import { VendorsInfoRequest } from '../../../marketplace/models/VendorsInfo';
+import { TransactionFraudInfoRequest } from '../../models/TransactionFraudInfo';
 
 export interface AuthCaptureRequest {
     walletId?: number;

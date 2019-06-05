@@ -1,4 +1,4 @@
-import {VendorsRefundInfoResponse} from '../../marketplace/models/VendorsRefundInfo';
+import { VendorsRefundInfoResponse } from '../../marketplace/models/VendorsRefundInfo';
 
 /**
  * Contains refund details

@@ -1,9 +1,9 @@
-import {PaymentSourcesRequest, PaymentSourcesResponse} from './PaymentSources';
-import {TransactionFraudInfoRequest, TransactionFraudInfoResponse} from '../../transaction/models/TransactionFraudInfo';
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
-import {LastPaymentInfoResponse} from './LastPaymentInfo';
-import {ShippingContactInfoResponse} from './ShippingContactInfo';
-import {FraudResultInfoResponse} from '../../transaction/models/FraudResultInfo';
+import { PaymentSourcesRequest, PaymentSourcesResponse } from './PaymentSources';
+import { TransactionFraudInfoRequest, TransactionFraudInfoResponse } from '../../transaction/models/TransactionFraudInfo';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
+import { LastPaymentInfoResponse } from './LastPaymentInfo';
+import { ShippingContactInfoResponse } from './ShippingContactInfo';
+import { FraudResultInfoResponse } from '../../transaction/models/FraudResultInfo';
 
 /**
  * Contains information about the vaulted shopper

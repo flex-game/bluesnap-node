@@ -7,7 +7,7 @@ export type EcpAccountType = 'CONSUMER_CHECKING' | 'CONSUMER_SAVINGS' | 'CORPORA
 export interface EcpRequest {
     accountNumber: string;
     routingNumber: string;
-    accountType: EcpAccountType
+    accountType: EcpAccountType;
 }
 
 export interface EcpResponse {

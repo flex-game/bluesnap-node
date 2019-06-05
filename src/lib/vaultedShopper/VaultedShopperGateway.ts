@@ -1,5 +1,5 @@
-import {HttpClient} from '../http/HttpClient';
-import {VaultedShopperRequest, VaultedShopperResponse} from './models/VaultedShopper';
+import { HttpClient } from '../http/HttpClient';
+import { VaultedShopperRequest, VaultedShopperResponse } from './models/VaultedShopper';
 
 export class VaultedShopperGateway {
     private http: HttpClient;

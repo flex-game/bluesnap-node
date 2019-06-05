@@ -1,8 +1,8 @@
-import {BillingContactInfoRequest, BillingContactInfoResponse} from './BillingContactInfo';
-import {CreditCardRequest, CreditCardResponse} from '../../transaction/card/models/CreditCard';
-import {EcpDetailsRequest, EcpDetailsResponse} from './EcpDetails';
-import {SepaDirectDebitRequest, SepaDirectDebitResponse} from './SepaDirectDebit';
-import {EcpInfoRequest, EcpInfoResponse} from './EcpInfo';
+import { BillingContactInfoRequest, BillingContactInfoResponse } from './BillingContactInfo';
+import { CreditCardRequest, CreditCardResponse } from '../../transaction/card/models/CreditCard';
+import { EcpDetailsRequest, EcpDetailsResponse } from './EcpDetails';
+import { SepaDirectDebitRequest, SepaDirectDebitResponse } from './SepaDirectDebit';
+import { EcpInfoRequest, EcpInfoResponse } from './EcpInfo';
 
 /**
  * Contains payment source information for vaulted shoppers

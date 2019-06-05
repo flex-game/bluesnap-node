@@ -1,4 +1,4 @@
-import {ErrorMessage} from './ErrorMessage';
+import { ErrorMessage } from './ErrorMessage';
 
 /**
  * A validated response handles errors with details returned from the BlueSnap Api.

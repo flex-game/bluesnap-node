@@ -1,4 +1,4 @@
-import {VendorInfoRequest, VendorInfoResponse} from './VendorInfo';
+import { VendorInfoRequest, VendorInfoResponse } from './VendorInfo';
 
 /**
  * Contains vendor information for this transaction

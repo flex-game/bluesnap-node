@@ -1,6 +1,6 @@
-import {ApplePayRequest, ApplePayResponse} from './ApplePay';
-import {BillingContactInfoResponse} from '../../vaultedShopper/models/BillingContactInfo';
-import {TokenizedCardResponse} from './TokenizedCard';
+import { ApplePayRequest, ApplePayResponse } from './ApplePay';
+import { BillingContactInfoResponse } from '../../vaultedShopper/models/BillingContactInfo';
+import { TokenizedCardResponse } from './TokenizedCard';
 
 /**
  * Contains wallet information for Apple Pay and Google Pay

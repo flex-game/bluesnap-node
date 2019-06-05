@@ -1,5 +1,5 @@
 import * as querystring from 'querystring';
-import {HttpClient} from '../http/HttpClient';
+import { HttpClient } from '../http/HttpClient';
 
 export class RefundGateway {
     private http: HttpClient;

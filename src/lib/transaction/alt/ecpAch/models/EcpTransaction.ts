@@ -1,4 +1,4 @@
-import {EcpAccountType} from '../../../../vaultedShopper/models/Ecp';
+import { EcpAccountType } from '../../../../vaultedShopper/models/Ecp';
 
 /**
  * Contains the information required to process an ECP/ACH transaction

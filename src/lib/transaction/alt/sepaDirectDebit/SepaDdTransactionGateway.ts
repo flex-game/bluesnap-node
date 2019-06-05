@@ -1,5 +1,5 @@
-import {HttpClient} from '../../../http/HttpClient';
-import {AltTransactionSepaDdRequest, AltTransactionSepaDdResponse} from './models/AltTransactionSepaDirectDebit';
+import { HttpClient } from '../../../http/HttpClient';
+import { AltTransactionSepaDdRequest, AltTransactionSepaDdResponse } from './models/AltTransactionSepaDirectDebit';
 
 export class SepaDdTransactionGateway {
     private http: HttpClient;

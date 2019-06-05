@@ -1,4 +1,4 @@
-import {VendorRefundInfoResponse} from './VendorRefundInfo';
+import { VendorRefundInfoResponse } from './VendorRefundInfo';
 
 /**
  * Contains vendor refund details for this transaction

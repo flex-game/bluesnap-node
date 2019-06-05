@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import {BlueSnapConfig} from '../bluesnap/BlueSnapConfig';
+import { BlueSnapConfig } from '../bluesnap/BlueSnapConfig';
 
 const { version } = require('../../../package.json');
 

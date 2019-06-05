@@ -1,7 +1,7 @@
-import {WalletResponse} from '../../wallet/models/Wallet';
-import {CreditCardResponse} from '../../transaction/card/models/CreditCard';
-import {SepaDirectDebitResponse} from './SepaDirectDebit';
-import {EcpResponse} from './Ecp';
+import { WalletResponse } from '../../wallet/models/Wallet';
+import { CreditCardResponse } from '../../transaction/card/models/CreditCard';
+import { SepaDirectDebitResponse } from './SepaDirectDebit';
+import { EcpResponse } from './Ecp';
 
 /**
  * Contains details about the payment method that the shopper used for their most recent purchase

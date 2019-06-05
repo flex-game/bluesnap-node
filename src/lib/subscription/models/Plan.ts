@@ -1,4 +1,4 @@
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
 
 /**
  * Contains details for a subscription billing plan

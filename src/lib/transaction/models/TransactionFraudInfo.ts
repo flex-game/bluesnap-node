@@ -1,5 +1,5 @@
-import {ShippingContactInfoRequest, ShippingContactInfoResponse} from '../../vaultedShopper/models/ShippingContactInfo';
-import {UdfRequest, UdfResponse} from './Udf';
+import { ShippingContactInfoRequest, ShippingContactInfoResponse } from '../../vaultedShopper/models/ShippingContactInfo';
+import { UdfRequest, UdfResponse } from './Udf';
 
 /**
  * Contains information used for fraud prevention

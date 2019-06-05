@@ -1,6 +1,8 @@
-import {HttpClient} from '../../http/HttpClient';
-import {AuthCaptureRequest, AuthRequest, AuthReversalRequest, CaptureRequest} from './models/AuthCapture';
-import {CardTransactionResponse} from './models/CardTransaction';
+import { HttpClient } from '../../http/HttpClient';
+import {
+    AuthCaptureRequest, AuthRequest, AuthReversalRequest, CaptureRequest,
+} from './models/AuthCapture';
+import { CardTransactionResponse } from './models/CardTransaction';
 
 export class CardTransactionGateway {
     private http: HttpClient;

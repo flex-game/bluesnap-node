@@ -1,12 +1,12 @@
-import {PayerInfoRequest, PayerInfoResponse} from '../../vaultedShopper/models/PayerInfo';
-import {PaymentSourceRequest, PaymentSourceResponse} from './PaymentSource';
-import {TransactionFraudInfoRequest} from '../../transaction/models/TransactionFraudInfo';
-import {Level3DataRequest, Level3DataResponse} from '../../transaction/models/Level3Data';
-import {ThreeDSecureRequest, ThreeDSecureResponse} from '../../transaction/models/ThreeDSecure';
-import {ChargeFrequency} from './Plan';
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
-import {ChargeResponse} from './Charge';
-import {FraudResultInfoResponse} from '../../transaction/models/FraudResultInfo';
+import { PayerInfoRequest, PayerInfoResponse } from '../../vaultedShopper/models/PayerInfo';
+import { PaymentSourceRequest, PaymentSourceResponse } from './PaymentSource';
+import { TransactionFraudInfoRequest } from '../../transaction/models/TransactionFraudInfo';
+import { Level3DataRequest, Level3DataResponse } from '../../transaction/models/Level3Data';
+import { ThreeDSecureRequest, ThreeDSecureResponse } from '../../transaction/models/ThreeDSecure';
+import { ChargeFrequency } from './Plan';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
+import { ChargeResponse } from './Charge';
+import { FraudResultInfoResponse } from '../../transaction/models/FraudResultInfo';
 
 /**
  * Contains information about a specific subscription

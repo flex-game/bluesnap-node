@@ -1,5 +1,5 @@
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
-import {SubscriptionResponse} from './Subscription';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
+import { SubscriptionResponse } from './Subscription';
 
 /**
  * Contains a list of subscriptions

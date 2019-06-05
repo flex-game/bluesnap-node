@@ -1,5 +1,5 @@
-import {EcpTransactionRequest, EcpTransactionResponse} from './EcpTransaction';
-import {AltTransactionRequest, AltTransactionResponse} from '../../models/AltTransaction';
+import { EcpTransactionRequest, EcpTransactionResponse } from './EcpTransaction';
+import { AltTransactionRequest, AltTransactionResponse } from '../../models/AltTransaction';
 
 export interface AltTransactionEcpAchRequest extends AltTransactionRequest {
     authorizedByShopper: boolean;
