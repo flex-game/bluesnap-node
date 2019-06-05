@@ -1,14 +1,11 @@
 import * as querystring from 'querystring';
 import HttpClient from '../http/HttpClient';
-import PlanRequest from './models/plan/PlanRequest';
-import PlanResponse from './models/plan/PlanResponse';
-import PlanListResponse from './models/planList/PlanListResponse';
-import SubscriptionRequest from './models/subscription/SubscriptionRequest';
-import SubscriptionResponse from './models/subscription/SubscriptionResponse';
-import SubscriptionListResponse from './models/subscriptionList/SubscriptionListResponse';
-import ChargeResponse from './models/charge/ChargeResponse';
-import ChargeListResponse from './models/chargeList/ChargeListResponse';
-import ChargeRequest from './models/charge/ChargeRequest';
+import {PlanRequest, PlanResponse} from './models/Plan';
+import {PlanListResponse} from './models/PlanList';
+import {SubscriptionRequest, SubscriptionResponse} from './models/Subscription';
+import {ChargeRequest, ChargeResponse} from './models/Charge';
+import {SubscriptionListResponse} from './models/SubscriptionList';
+import {ChargeListResponse} from './models/ChargeList';
 
 export default class SubscriptionGateway {
     private http: HttpClient;

@@ -9,7 +9,7 @@ import SubscriptionAndBillingPlanErrors from '../enum/SubscriptionAndBillingPlan
 import VaultedShopperErrors from '../enum/VaultedShopperErrors';
 import WalletErrors from '../enum/WalletErrors';
 
-export default interface ErrorMessage {
+export interface ErrorMessage {
     errorName: AltTransactionErrors | BatchTransactionErrors | CardTransactionErrors | FraudErrors | HostedPaymentFieldErrors | MarketplaceErrors | RefundErrors | SubscriptionAndBillingPlanErrors | VaultedShopperErrors | WalletErrors;
     code: number;
     description: string;

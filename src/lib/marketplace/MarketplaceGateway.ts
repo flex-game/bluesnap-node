@@ -1,8 +1,7 @@
 import * as querystring from 'querystring';
 import HttpClient from '../http/HttpClient';
-import VendorRequest from './models/vendor/VendorRequest';
-import VendorResponse from './models/vendor/VendorResponse';
-import VendorsResponse from './models/vendors/VendorsResponse';
+import {VendorRequest, VendorResponse} from './models/Vendor';
+import {VendorsResponse} from './models/Vendors';
 
 export default class MarketplaceGateway {
     private http: HttpClient;

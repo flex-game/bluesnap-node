@@ -1,6 +1,5 @@
 import HttpClient from '../../../http/HttpClient';
-import AltTransactionEcpAchResponse from './models/altTransactionEcpAch/AltTransactionEcpAchResponse';
-import AltTransactionEcpAchRequest from './models/altTransactionEcpAch/AltTransactionEcpAchRequest';
+import {AltTransactionEcpAchRequest, AltTransactionEcpAchResponse} from './models/AltTransactionEcpAch';
 
 export default class EcpAchTransactionGateway {
     private http: HttpClient;
