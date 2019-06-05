@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "compile": "tsc && copyfiles 'src/**/*' dist -e '**/*.ts' -e '**/*/*.js'",
+    "compile": "tsc --declaration && copyfiles 'src/**/*' dist -e '**/*.ts' -e '**/*/*.js'",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint --fix \"src/**\"",
     "test": "NODE_ENV=test npx jest --testPathPattern='test' --detectOpenHandles --forceExit",
