@@ -4,6 +4,9 @@
   "description": "BlueSnap Node SDK",
   "main": "index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "compile": "tsc && copyfiles 'src/**/*' dist -e '**/*.ts' -e '**/*/*.js'",
     "lint": "eslint \"src/**\"",
