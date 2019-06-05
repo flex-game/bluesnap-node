@@ -1,16 +1,17 @@
 import * as faker from 'faker';
-import AltTransactionEcpAchResponse
-    from '../../../../../src/lib/transaction/alt/ecpAch/models/altTransactionEcpAch/AltTransactionEcpAchResponse';
+import {
+    AltTransactionEcpAchRequest,
+    AltTransactionEcpAchResponse
+} from '../../../../../src/lib/transaction/alt/ecpAch/models/AltTransactionEcpAch';
 import gateway from '../../../bluesnap/BlueSnapTestClient';
-import AltTransactionEcpAchRequest
-    from '../../../../../src/lib/transaction/alt/ecpAch/models/altTransactionEcpAch/AltTransactionEcpAchRequest';
+import {EcpAccountType} from '../../../../../src/lib/vaultedShopper/models/Ecp';
 
 describe('EcpAchTransactionGateway Integration Test', () => {
     let ecpAchTransaction: AltTransactionEcpAchResponse;
 
     const mockEcpAch = {
         routingNumber: '011075150',
-        accountType: <'CONSUMER_CHECKING'>'CONSUMER_CHECKING',
+        accountType: <EcpAccountType>'CONSUMER_CHECKING',
         accountNumber: '4099999992',
     };
 

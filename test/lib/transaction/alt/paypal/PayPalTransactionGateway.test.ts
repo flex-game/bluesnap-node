@@ -1,9 +1,9 @@
 import * as faker from 'faker';
 import gateway from '../../../bluesnap/BlueSnapTestClient';
-import AltTransactionPayPalResponse
-    from '../../../../../src/lib/transaction/alt/paypal/models/altTransactionPayPal/AltTransactionPayPalResponse';
-import AltTransactionPayPalRequest
-    from '../../../../../src/lib/transaction/alt/paypal/models/altTransactionPayPal/AltTransactionPayPalRequest';
+import {
+    AltTransactionPayPalRequest,
+    AltTransactionPayPalResponse
+} from '../../../../../src/lib/transaction/alt/paypal/models/AltTransactionPayPal';
 
 describe('PayPalTransactionGatewat Integration Test', () => {
     let paypalTransaction: AltTransactionPayPalResponse;

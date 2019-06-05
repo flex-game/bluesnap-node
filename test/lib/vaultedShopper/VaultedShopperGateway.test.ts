@@ -1,7 +1,6 @@
 import * as faker from 'faker';
 import gateway from '../bluesnap/BlueSnapTestClient';
-import VaultedShopperRequest from '../../../src/lib/vaultedShopper/models/vaultedShopper/VaultedShopperRequest';
-import VaultedShopperResponse from '../../../src/lib/vaultedShopper/models/vaultedShopper/VaultedShopperResponse';
+import {VaultedShopperRequest, VaultedShopperResponse} from '../../../src/lib/vaultedShopper/models/VaultedShopper';
 
 describe('VaultedShopperGateway Integration Test', () => {
     let shopper: VaultedShopperResponse;

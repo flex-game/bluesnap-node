@@ -1,11 +1,8 @@
 import gateway from '../bluesnap/BlueSnapTestClient';
-import ApplePayWalletResponse from '../../../src/lib/wallet/models/applePayWallet/ApplePayWalletResponse';
-import ApplePayWalletRequest from '../../../src/lib/wallet/models/applePayWallet/ApplePayWalletRequest';
-import MasterpassWalletRequest from '../../../src/lib/wallet/models/masterpassWallet/MasterpassWalletRequest';
-import MasterpassWalletResponse from '../../../src/lib/wallet/models/masterpassWallet/MasterpassWalletResponse';
-import VisaCheckoutWalletRequest from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletRequest';
-import VisaCheckoutWalletResponse from '../../../src/lib/wallet/models/visaCheckoutWallet/VisaCheckoutWalletResponse';
-import GetWalletResponse from '../../../src/lib/wallet/models/retrievedWallet/GetWalletResponse';
+import {ApplePayWalletRequest, ApplePayWalletResponse} from '../../../src/lib/wallet/models/ApplePayWallet';
+import {VisaCheckoutWalletRequest, VisaCheckoutWalletResponse} from '../../../src/lib/wallet/models/VisaCheckoutWallet';
+import {MasterpassWalletRequest, MasterpassWalletResponse} from '../../../src/lib/wallet/models/MasterpassWallet';
+import {GetWalletResponse} from '../../../src/lib/wallet/models/GetWallet';
 
 describe('WalletGateway Integration Test', () => {
     let wallet: VisaCheckoutWalletResponse;

@@ -1,14 +1,11 @@
 import * as faker from 'faker';
 import gateway from '../bluesnap/BlueSnapTestClient';
-import PlanRequest from '../../../src/lib/subscription/models/plan/PlanRequest';
-import PlanResponse from '../../../src/lib/subscription/models/plan/PlanResponse';
-import PlanListResponse from '../../../src/lib/subscription/models/planList/PlanListResponse';
-import SubscriptionRequest from '../../../src/lib/subscription/models/subscription/SubscriptionRequest';
-import SubscriptionResponse from '../../../src/lib/subscription/models/subscription/SubscriptionResponse';
-import SubscriptionListResponse from '../../../src/lib/subscription/models/subscriptionList/SubscriptionListResponse';
-import ChargeRequest from '../../../src/lib/subscription/models/charge/ChargeRequest';
-import ChargeResponse from '../../../src/lib/subscription/models/charge/ChargeResponse';
-import ChargeListResponse from '../../../src/lib/subscription/models/chargeList/ChargeListResponse';
+import {PlanListResponse} from '../../../src/lib/subscription/models/PlanList';
+import {SubscriptionRequest, SubscriptionResponse} from '../../../src/lib/subscription/models/Subscription';
+import {ChargeRequest, ChargeResponse} from '../../../src/lib/subscription/models/Charge';
+import {PlanRequest, PlanResponse} from '../../../src/lib/subscription/models/Plan';
+import {SubscriptionListResponse} from '../../../src/lib/subscription/models/SubscriptionList';
+import {ChargeListResponse} from '../../../src/lib/subscription/models/ChargeList';
 
 describe('SubscriptionGateway Integration Test', () => {
     let plan: PlanResponse;

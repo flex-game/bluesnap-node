@@ -1,6 +1,6 @@
 import * as faker from 'faker';
-import CardTransactionResponse from '../../../src/lib/transaction/card/models/cardTransaction/CardTransactionResponse';
 import gateway from '../bluesnap/BlueSnapTestClient';
+import {CardTransactionResponse} from '../../../src/lib/transaction/card/models/CardTransaction';
 
 describe('CardTransactionGateway Integration Test', () => {
     let transaction: CardTransactionResponse;
