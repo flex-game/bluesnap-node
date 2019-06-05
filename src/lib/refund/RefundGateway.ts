@@ -1,7 +1,7 @@
 import * as querystring from 'querystring';
-import HttpClient from '../http/HttpClient';
+import {HttpClient} from '../http/HttpClient';
 
-export default class RefundGateway {
+export class RefundGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

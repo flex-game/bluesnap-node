@@ -1,5 +1,5 @@
 import * as querystring from 'querystring';
-import HttpClient from '../http/HttpClient';
+import {HttpClient} from '../http/HttpClient';
 import {PlanRequest, PlanResponse} from './models/Plan';
 import {PlanListResponse} from './models/PlanList';
 import {SubscriptionRequest, SubscriptionResponse} from './models/Subscription';
@@ -7,7 +7,7 @@ import {ChargeRequest, ChargeResponse} from './models/Charge';
 import {SubscriptionListResponse} from './models/SubscriptionList';
 import {ChargeListResponse} from './models/ChargeList';
 
-export default class SubscriptionGateway {
+export class SubscriptionGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

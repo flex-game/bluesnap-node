@@ -1,11 +1,11 @@
-import CardTransactionGateway from './card/CardTransactionGateway';
-import WalletTransactionGateway from './wallet/WalletTransactionGateway';
-import EcpAchTransactionGateway from './alt/ecpAch/EcpAchTransactionGateway';
-import SepaDdTransactionGateway from './alt/sepaDirectDebit/SepaDdTransactionGateway';
-import PayPalTransactionGateway from './alt/paypal/PayPalTransactionGateway';
-import HttpClient from '../http/HttpClient';
+import {WalletTransactionGateway} from './wallet/WalletTransactionGateway';
+import {EcpAchTransactionGateway} from './alt/ecpAch/EcpAchTransactionGateway';
+import {SepaDdTransactionGateway} from './alt/sepaDirectDebit/SepaDdTransactionGateway';
+import {HttpClient} from '../http/HttpClient';
+import {CardTransactionGateway} from './card/CardTransactionGateway';
+import {PayPalTransactionGateway} from './alt/paypal/PayPalTransactionGateway';
 
-export default class TransactionGateway {
+export class TransactionGateway {
     private http: HttpClient;
 
     public card: CardTransactionGateway;

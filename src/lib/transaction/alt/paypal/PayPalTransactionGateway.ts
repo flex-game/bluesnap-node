@@ -1,7 +1,7 @@
-import HttpClient from '../../../http/HttpClient';
+import {HttpClient} from '../../../http/HttpClient';
 import {AltTransactionPayPalRequest, AltTransactionPayPalResponse} from './models/AltTransactionPayPal';
 
-export default class PayPalTransactionGateway {
+export class PayPalTransactionGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

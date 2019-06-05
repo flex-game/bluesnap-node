@@ -1,13 +1,13 @@
-import MarketplaceGateway from '../marketplace/MarketplaceGateway';
-import RefundGateway from '../refund/RefundGateway';
-import VaultedShopperGateway from '../vaultedShopper/VaultedShopperGateway';
-import SubscriptionGateway from '../subscription/SubscriptionGateway';
-import WalletGateway from '../wallet/WalletGateway';
-import TransactionGateway from '../transaction/TransactionGateway';
-import BlueSnapConfig from './BlueSnapConfig';
-import HttpClient from '../http/HttpClient';
+import {BlueSnapConfig} from './BlueSnapConfig';
+import {RefundGateway} from '../refund/RefundGateway';
+import {WalletGateway} from '../wallet/WalletGateway';
+import {VaultedShopperGateway} from '../vaultedShopper/VaultedShopperGateway';
+import {MarketplaceGateway} from '../marketplace/MarketplaceGateway';
+import {HttpClient} from '../http/HttpClient';
+import {SubscriptionGateway} from '../subscription/SubscriptionGateway';
+import {TransactionGateway} from '../transaction/TransactionGateway';
 
-export default class BlueSnapGateway {
+export class BlueSnapGateway {
     public marketplace: MarketplaceGateway;
 
     public refund: RefundGateway;
