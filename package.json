@@ -8,7 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "compile": "tsc --declaration",
+    "compile": "npm run generate-barrels && tsc --declaration",
+    "generate-barrels": "barrelsby -d src/lib --singleQuotes --delete",
     "lint": "eslint \"src/**\"",
     "lint:fix": "eslint --fix \"src/**\"",
     "test": "NODE_ENV=test npx jest --testPathPattern='test' --detectOpenHandles --forceExit",
@@ -41,6 +42,7 @@
     "@types/node-fetch": "^2.3.4",
     "@typescript-eslint/eslint-plugin": "^1.9.0",
     "@typescript-eslint/parser": "^1.9.0",
+    "barrelsby": "^2.1.1",
     "config": "^3.1.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb-base": "^13.1.0",
