@@ -1,4 +1,4 @@
-enum BatchTransactionErrors {
+export enum BatchTransactionErrors {
     UNEXPECTED_ERROR = 'UNEXPECTED_ERROR',
     MISSING_CALLBACK_URL = 'MISSING_CALLBACK_URL',
     MISSING_BATCH_ID = 'MISSING_BATCH_ID',
@@ -10,5 +10,3 @@ enum BatchTransactionErrors {
     XSS_EXCEPTION = 'XSS_EXCEPTION',
     TRANSACTION_TYPE_NOT_ALLOWED = 'TRANSACTION_TYPE_NOT_ALLOWED',
 }
-
-export default BatchTransactionErrors;
