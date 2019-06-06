@@ -6,13 +6,22 @@ A node sdk for the [BlueSnap API](https://developers.bluesnap.com/v8976-JSON/doc
 
 ### Installation
 ```
-npm i --save bluesnap-node
-const bluesnap = require('bluesnap-node');
+npm i --save bluesnap
 ```
 
 ### Quick Start
+
+#### With Typescript
 ```
-const bluesnap = require('bluesnap-node');
+import { BlueSnapGateway, BlueSnapConfig } from 'bluesnap';
+
+const bluesnapConfig = new BlueSnapConfig('Sandbox', 'username', 'password', '3.0');
+const gateway = new BlueSnapGateway(bluesnapConfig);
+```
+
+#### Without Typescript
+```
+const bluesnap = require('bluesnap');
 
 const gateway = new bluesnap.BlueSnapGateway({
   environment: 'Sandbox', // 'Production' or 'Sandbox'
