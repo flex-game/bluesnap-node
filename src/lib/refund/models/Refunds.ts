@@ -1,5 +1,5 @@
-import {VendorsBalanceInfoResponse} from '../../marketplace/models/VendorsBalanceInfo';
-import {RefundResponse} from './Refund';
+import { VendorsBalanceInfoResponse } from '../../marketplace/models/VendorsBalanceInfo';
+import { RefundResponse } from './Refund';
 
 /**
  * Contains existing refunds for this transaction

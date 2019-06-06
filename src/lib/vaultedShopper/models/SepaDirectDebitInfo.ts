@@ -1,5 +1,5 @@
-import {BillingContactInfoRequest, BillingContactInfoResponse} from './BillingContactInfo';
-import {SepaDirectDebitRequest, SepaDirectDebitResponse} from './SepaDirectDebit';
+import { BillingContactInfoRequest, BillingContactInfoResponse } from './BillingContactInfo';
+import { SepaDirectDebitRequest, SepaDirectDebitResponse } from './SepaDirectDebit';
 
 /**
  * Contains SEPA Direct Debit account details & billing info for vaulted shoppers

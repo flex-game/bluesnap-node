@@ -1,4 +1,4 @@
-import {VendorBalanceInfoResponse} from './VendorBalanceInfo';
+import { VendorBalanceInfoResponse } from './VendorBalanceInfo';
 
 /**
  * Contains vendor balance details for this transaction

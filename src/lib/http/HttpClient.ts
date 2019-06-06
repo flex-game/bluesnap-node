@@ -1,9 +1,9 @@
 import fetch from 'node-fetch';
-import BlueSnapConfig from '../bluesnap/BlueSnapConfig';
+import { BlueSnapConfig } from '../bluesnap/BlueSnapConfig';
 
 const { version } = require('../../../package.json');
 
-export default class HttpClient {
+export class HttpClient {
     private config: BlueSnapConfig;
 
     public constructor(config: BlueSnapConfig) {

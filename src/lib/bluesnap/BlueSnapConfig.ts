@@ -1,6 +1,6 @@
 type Environment = 'Production' | 'Sandbox';
 
-export default class BlueSnapConfig {
+export class BlueSnapConfig {
     public environment: Environment;
 
     public username: string;

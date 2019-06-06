@@ -1,4 +1,4 @@
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
 
 export interface OnboardApplePayRequest {
     walletType: string;

@@ -1,8 +1,8 @@
-import {VendorPrincipalRequest, VendorPrincipalResponse} from './VendorPrincipal';
-import {VendorAgreementRequest, VendorAgreementResponse} from './VendorAgreement';
-import {PayoutInfoRequest, PayoutInfoResponse} from './PayoutInfo';
-import {ValidatedResponse} from '../../errors/models/ValidatedResponse';
-import {VerificationResponse} from './Verification';
+import { VendorPrincipalRequest, VendorPrincipalResponse } from './VendorPrincipal';
+import { VendorAgreementRequest, VendorAgreementResponse } from './VendorAgreement';
+import { PayoutInfoRequest, PayoutInfoResponse } from './PayoutInfo';
+import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
+import { VerificationResponse } from './Verification';
 
 export interface VendorRequest {
     email: string;

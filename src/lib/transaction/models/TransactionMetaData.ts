@@ -1,4 +1,4 @@
-import {MetaDataRequest, MetaDataResponse} from './MetaData';
+import { MetaDataRequest, MetaDataResponse } from './MetaData';
 
 /**
  * Contains metadata about the transaction

@@ -27,4 +27,3 @@ export interface VendorPrincipalResponse {
     passportNumber?: string; // Required if country is NOT US
     email: string;
 }
-

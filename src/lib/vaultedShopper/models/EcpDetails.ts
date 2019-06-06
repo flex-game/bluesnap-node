@@ -1,5 +1,5 @@
-import {EcpRequest, EcpResponse} from './Ecp';
-import {BillingContactInfoRequest, BillingContactInfoResponse} from './BillingContactInfo';
+import { EcpRequest, EcpResponse } from './Ecp';
+import { BillingContactInfoRequest, BillingContactInfoResponse } from './BillingContactInfo';
 
 /**
  * Contains account details for vaulted shoppers with multiple ACH accounts

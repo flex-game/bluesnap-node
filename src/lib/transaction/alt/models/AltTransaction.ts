@@ -1,10 +1,10 @@
-import {TransactionMetaDataRequest, TransactionMetaDataResponse} from '../../models/TransactionMetaData';
-import {PayerInfoRequest, PayerInfoResponse} from '../../../vaultedShopper/models/PayerInfo';
-import {FraudResultInfoResponse} from '../../models/FraudResultInfo';
-import {ProcessingInfoResponse} from '../../models/ProcessingInfo';
-import {ValidatedResponse} from '../../../errors/models/ValidatedResponse';
-import {RefundsResponse} from '../../../refund/models/Refunds';
-import {TransactionFraudInfoRequest} from '../../models/TransactionFraudInfo';
+import { TransactionMetaDataRequest, TransactionMetaDataResponse } from '../../models/TransactionMetaData';
+import { PayerInfoRequest, PayerInfoResponse } from '../../../vaultedShopper/models/PayerInfo';
+import { FraudResultInfoResponse } from '../../models/FraudResultInfo';
+import { ProcessingInfoResponse } from '../../models/ProcessingInfo';
+import { ValidatedResponse } from '../../../errors/models/ValidatedResponse';
+import { RefundsResponse } from '../../../refund/models/Refunds';
+import { TransactionFraudInfoRequest } from '../../models/TransactionFraudInfo';
 
 /**
  * Contains the information required to process a transaction with an alternative payment method

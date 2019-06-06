@@ -1,9 +1,9 @@
 import * as querystring from 'querystring';
-import HttpClient from '../http/HttpClient';
-import {VendorRequest, VendorResponse} from './models/Vendor';
-import {VendorsResponse} from './models/Vendors';
+import { HttpClient } from '../http/HttpClient';
+import { VendorRequest, VendorResponse } from './models/Vendor';
+import { VendorsResponse } from './models/Vendors';
 
-export default class MarketplaceGateway {
+export class MarketplaceGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

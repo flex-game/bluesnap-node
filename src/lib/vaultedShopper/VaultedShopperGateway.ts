@@ -1,7 +1,7 @@
-import HttpClient from '../http/HttpClient';
-import {VaultedShopperRequest, VaultedShopperResponse} from './models/VaultedShopper';
+import { HttpClient } from '../http/HttpClient';
+import { VaultedShopperRequest, VaultedShopperResponse } from './models/VaultedShopper';
 
-export default class VaultedShopperGateway {
+export class VaultedShopperGateway {
     private http: HttpClient;
 
     public constructor(http: HttpClient) {

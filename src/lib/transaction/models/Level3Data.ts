@@ -1,4 +1,4 @@
-import {Level3DataItemsResponse} from './Level3DataItems';
+import { Level3DataItemsResponse } from './Level3DataItems';
 
 /**
  * Contains Level 2/3 data properties for the transaction
