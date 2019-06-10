@@ -42,6 +42,8 @@ export * from './subscription/models/Plan';
 export * from './subscription/models/PlanList';
 export * from './subscription/models/Subscription';
 export * from './subscription/models/SubscriptionList';
+export * from './testing/TestCards';
+export * from './testing/TestingGateway';
 export * from './transaction/TransactionGateway';
 export * from './transaction/alt/ecpAch/EcpAchTransactionGateway';
 export * from './transaction/alt/ecpAch/models/AltTransactionEcpAch';
