@@ -2,7 +2,7 @@ import { PaymentSourcesRequest, PaymentSourcesResponse } from './PaymentSources'
 import { TransactionFraudInfoRequest, TransactionFraudInfoResponse } from '../../transaction/models/TransactionFraudInfo';
 import { ValidatedResponse } from '../../errors/models/ValidatedResponse';
 import { LastPaymentInfoResponse } from './LastPaymentInfo';
-import {ShippingContactInfoRequest, ShippingContactInfoResponse} from './ShippingContactInfo';
+import { ShippingContactInfoRequest, ShippingContactInfoResponse } from './ShippingContactInfo';
 import { FraudResultInfoResponse } from '../../transaction/models/FraudResultInfo';
 
 /**

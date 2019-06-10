@@ -6,6 +6,7 @@ import { MarketplaceGateway } from '../marketplace/MarketplaceGateway';
 import { HttpClient } from '../http/HttpClient';
 import { SubscriptionGateway } from '../subscription/SubscriptionGateway';
 import { TransactionGateway } from '../transaction/TransactionGateway';
+import { TestingGateway } from '../testing/TestingGateway';
 
 export class BlueSnapGateway {
     public marketplace: MarketplaceGateway;
@@ -20,6 +21,8 @@ export class BlueSnapGateway {
 
     public transaction: TransactionGateway;
 
+    public testing: TestingGateway;
+
     public constructor(config: BlueSnapConfig) {
         const http = new HttpClient(config);
         this.marketplace = new MarketplaceGateway(http);
@@ -28,5 +31,6 @@ export class BlueSnapGateway {
         this.subscription = new SubscriptionGateway(http);
         this.wallet = new WalletGateway(http);
         this.transaction = new TransactionGateway(http);
+        this.testing = new TestingGateway();
     }
 }
