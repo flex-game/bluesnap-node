@@ -1,8 +1,6 @@
 import fetch from 'node-fetch';
 import { BlueSnapConfig } from '../bluesnap/BlueSnapConfig';
 
-const { version } = require('../../../package.json');
-
 export class HttpClient {
     private config: BlueSnapConfig;
 
@@ -52,7 +50,6 @@ export class HttpClient {
             Authorization: this.getAuthorizationHeader(),
             Accept: 'application/json',
             'Content-Type': 'application/json',
-            'User-Agent': `bluesnap-node-${version}`,
         };
 
         if (this.config.apiVersion) {
