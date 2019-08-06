@@ -9,6 +9,8 @@ import { TransactionGateway } from '../transaction/TransactionGateway';
 import { TestingGateway } from '../testing/TestingGateway';
 
 export class BlueSnapGateway {
+    public http: HttpClient;
+
     public marketplace: MarketplaceGateway;
 
     public refund: RefundGateway;
@@ -25,6 +27,7 @@ export class BlueSnapGateway {
 
     public constructor(config: BlueSnapConfig) {
         const http = new HttpClient(config);
+        this.http = http;
         this.marketplace = new MarketplaceGateway(http);
         this.refund = new RefundGateway(http);
         this.shopper = new VaultedShopperGateway(http);
