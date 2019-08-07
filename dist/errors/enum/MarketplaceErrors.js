@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var MarketplaceErrors;
+(function (MarketplaceErrors) {
+    MarketplaceErrors["REFUND_VENDOR_AMOUNT_NOT_SUPPORTED"] = "REFUND_VENDOR_AMOUNT_NOT_SUPPORTED";
+    MarketplaceErrors["REFUND_NEGATIVE_VENDOR_AMOUNT"] = "REFUND_NEGATIVE_VENDOR_AMOUNT";
+    MarketplaceErrors["REFUND_MAX_VENDOR_AMOUNT_FAILURE"] = "REFUND_MAX_VENDOR_AMOUNT_FAILURE";
+    MarketplaceErrors["REFUND_MAX_MERCHANT_AMOUNT_FAILURE"] = "REFUND_MAX_MERCHANT_AMOUNT_FAILURE";
+    MarketplaceErrors["VENDOR_PAYOUT_VALUES_EXCEEDS_MERCHANT"] = "VENDOR_PAYOUT_VALUES_EXCEEDS_MERCHANT";
+    MarketplaceErrors["DUPLICATE_VENDOR"] = "DUPLICATE_VENDOR";
+    MarketplaceErrors["VENDOR_LIMIT_MAX"] = "VENDOR_LIMIT_MAX";
+    MarketplaceErrors["VENDOR_COMMISSION_EXCEEDED"] = "VENDOR_COMMISSION_EXCEEDED";
+    MarketplaceErrors["VENDOR_RESERVE_NONE_DEFAULT_METHOD"] = "VENDOR_RESERVE_NONE_DEFAULT_METHOD";
+    MarketplaceErrors["REFUND_INVALID_VENDOR_REFUND_AMOUNT"] = "REFUND_INVALID_VENDOR_REFUND_AMOUNT";
+    MarketplaceErrors["REFUND_VENDOR_ERROR"] = "REFUND_VENDOR_ERROR";
+    MarketplaceErrors["REFUND_INVALID_VENDOR"] = "REFUND_INVALID_VENDOR";
+    MarketplaceErrors["VENDOR_ALREADY_FULLY_REFUNDED"] = "VENDOR_ALREADY_FULLY_REFUNDED";
+    MarketplaceErrors["REFUND_NEGATIVE_MERCHANT_AMOUNT"] = "REFUND_NEGATIVE_MERCHANT_AMOUNT";
+    MarketplaceErrors["UNAUTHORIZED_USE_OF_VENDOR"] = "UNAUTHORIZED_USE_OF_VENDOR";
+    MarketplaceErrors["VALIDATION_GENERAL_FAILURE"] = "VALIDATION_GENERAL_FAILURE";
+    MarketplaceErrors["INACTIVE_VENDOR"] = "INACTIVE_VENDOR";
+    MarketplaceErrors["DECLINED_VENDOR"] = "DECLINED_VENDOR";
+})(MarketplaceErrors = exports.MarketplaceErrors || (exports.MarketplaceErrors = {}));
+//# sourceMappingURL=MarketplaceErrors.js.map

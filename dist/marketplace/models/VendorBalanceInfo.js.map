@@ -1,0 +1,1 @@
+{"version":3,"file":"VendorBalanceInfo.js","sourceRoot":"","sources":["../../../src/lib/marketplace/models/VendorBalanceInfo.ts"],"names":[],"mappings":";AAAA;;GAEG","sourcesContent":["/**\n * Contains vendor balance details for this transaction\n */\n\nexport interface VendorBalanceInfoResponse {\n    vendorId: number;\n    vendorAmount: number;\n}\n"]}

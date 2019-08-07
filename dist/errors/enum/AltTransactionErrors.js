@@ -1,0 +1,29 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var AltTransactionErrors;
+(function (AltTransactionErrors) {
+    AltTransactionErrors["INVALID_API_VERSION"] = "INVALID_API_VERSION";
+    AltTransactionErrors["VALIDATION_GENERAL_FAILURE"] = "VALIDATION_GENERAL_FAILURE";
+    AltTransactionErrors["XSS_EXCEPTION"] = "XSS_EXCEPTION";
+    AltTransactionErrors["GENERAL_PAYMENT_PROCESSING_ERROR"] = "GENERAL_PAYMENT_PROCESSING_ERROR";
+    AltTransactionErrors["FAILED_CREATING_PAYPAL_TOKEN"] = "FAILED_CREATING_PAYPAL_TOKEN";
+    AltTransactionErrors["NO_AVAILABLE_PROCESSORS"] = "NO_AVAILABLE_PROCESSORS";
+    AltTransactionErrors["INVALID_PAYMENT_DETAILS"] = "INVALID_PAYMENT_DETAILS";
+    AltTransactionErrors["SHOPPER_NOT_FOUND"] = "SHOPPER_NOT_FOUND";
+    AltTransactionErrors["SHOPPER_COUNTRY_OFAC_SANCTIONED"] = "SHOPPER_COUNTRY_OFAC_SANCTIONED";
+    AltTransactionErrors["MULTIPLE_PAYMENT_METHODS_NON_SELECTED"] = "MULTIPLE_PAYMENT_METHODS_NON_SELECTED";
+    AltTransactionErrors["INVALID_STEP_FIELD"] = "INVALID_STEP_FIELD";
+    AltTransactionErrors["MULTIPLE_TRANSACTIONS_FOUND"] = "MULTIPLE_TRANSACTIONS_FOUND";
+    AltTransactionErrors["TRANSACTION_LOCKED"] = "TRANSACTION_LOCKED";
+    AltTransactionErrors["INVALID_ALT_TRANSACTION_TYPE"] = "INVALID_ALT_TRANSACTION_TYPE";
+    AltTransactionErrors["MULTI_SHOPPER_INFORMATION"] = "MULTI_SHOPPER_INFORMATION";
+    AltTransactionErrors["MISSING_SHOPPER_INFORMATION"] = "MISSING_SHOPPER_INFORMATION";
+    AltTransactionErrors["MISSING_PAYER_INFO_FIELDS"] = "MISSING_PAYER_INFO_FIELDS";
+    AltTransactionErrors["EXPECT_NO_ECP_DETAILS"] = "EXPECT_NO_ECP_DETAILS";
+    AltTransactionErrors["INVALID_ECP_ACCOUNT_TYPE"] = "INVALID_ECP_ACCOUNT_TYPE";
+    AltTransactionErrors["MISMATCH_SUBSCRIPTION_CURRENCY"] = "MISMATCH_SUBSCRIPTION_CURRENCY";
+    AltTransactionErrors["PAYPAL_UNSUPPORTED_CURRENCY"] = "PAYPAL_UNSUPPORTED_CURRENCY";
+    AltTransactionErrors["SUBSCRIPTION_NOT_FOUND"] = "SUBSCRIPTION_NOT_FOUND";
+    AltTransactionErrors["MISSING_ARGUMENTS"] = "MISSING_ARGUMENTS";
+})(AltTransactionErrors = exports.AltTransactionErrors || (exports.AltTransactionErrors = {}));
+//# sourceMappingURL=AltTransactionErrors.js.map

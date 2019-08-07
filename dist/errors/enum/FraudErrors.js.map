@@ -1,0 +1,1 @@
+{"version":3,"file":"FraudErrors.js","sourceRoot":"","sources":["../../../src/lib/errors/enum/FraudErrors.ts"],"names":[],"mappings":";;AAAA,IAAY,WAEX;AAFD,WAAY,WAAW;IACnB,gDAAiC,CAAA;AACrC,CAAC,EAFW,WAAW,GAAX,mBAAW,KAAX,mBAAW,QAEtB","sourcesContent":["export enum FraudErrors {\n    FRAUD_DETECTED = 'FRAUD_DETECTED'\n}\n"]}

@@ -20,7 +20,7 @@ test-reports
 coverage
 
 # Typescript
-dist
+
 
 # Configs
 config/test.yml

@@ -1,0 +1,1 @@
+{"version":3,"file":"VendorRefundInfo.js","sourceRoot":"","sources":["../../../src/lib/marketplace/models/VendorRefundInfo.ts"],"names":[],"mappings":";AAAA;;GAEG","sourcesContent":["/**\n * Contains vendor refund details for this transaction\n */\n\nexport interface VendorRefundInfoResponse {\n    vendorId: number;\n    vendorAmount: number;\n}\n"]}

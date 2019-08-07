@@ -1,0 +1,20 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var WalletErrors;
+(function (WalletErrors) {
+    WalletErrors["MISSING_WALLET_FIELDS"] = "MISSING_WALLET_FIELDS";
+    WalletErrors["INVALID_WALLET_FIELDS"] = "INVALID_WALLET_FIELDS";
+    WalletErrors["WALLET_PROCESSING_FAILURE"] = "WALLET_PROCESSING_FAILURE";
+    WalletErrors["WALLET_EXPIRED"] = "WALLET_EXPIRED";
+    WalletErrors["WALLET_DUPLICATE_PAYMENT_METHODS"] = "WALLET_DUPLICATE_PAYMENT_METHODS";
+    WalletErrors["WALLET_PAYMENT_NOT_ENABLED"] = "WALLET_PAYMENT_NOT_ENABLED";
+    WalletErrors["DUPLICATE_WALLET_RESOURCE"] = "DUPLICATE_WALLET_RESOURCE";
+    WalletErrors["WALLET_CLIENT_KEY_FAILURE"] = "WALLET_CLIENT_KEY_FAILURE";
+    WalletErrors["INVALID_WALLET_PAYMENT_DATA"] = "INVALID_WALLET_PAYMENT_DATA";
+    WalletErrors["WALLET_ONBOARDING_ERROR"] = "WALLET_ONBOARDING_ERROR";
+    WalletErrors["WALLET_MISSING_DOMAIN"] = "WALLET_MISSING_DOMAIN";
+    WalletErrors["WALLET_UNREGISTERED_DOMAIN"] = "WALLET_UNREGISTERED_DOMAIN";
+    WalletErrors["WALLET_CHECKOUT_CANCELED"] = "WALLET_CHECKOUT_CANCELED";
+    WalletErrors["USER_NOT_AUTHORIZED"] = "USER_NOT_AUTHORIZED";
+})(WalletErrors = exports.WalletErrors || (exports.WalletErrors = {}));
+//# sourceMappingURL=WalletErrors.js.map
